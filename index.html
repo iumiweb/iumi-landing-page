@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iumi WEB DESIGN</title>
+    <meta
+      name="description"
+      content="想いも情報も届く。つながりを育てるデザインを。iumi WEB DESIGNのポートフォリオランディングページ。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a class="logo-mobile" href="#top" aria-label="iumi WEB DESIGN トップへ">
+          <img src="./assets/images/hero-logo-new.png" alt="" />
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="global-nav">
+          <img src="./assets/images/icon-hamburger.svg" alt="" />
+          <span class="sr-only">メニューを開く</span>
+        </button>
+        <nav id="global-nav" class="nav" aria-label="グローバルナビゲーション">
+          <a href="#works">WORK</a>
+          <a href="#services">SERVICE</a>
+          <a href="#about">ABOUT</a>
+          <a href="#contact">CONTACT</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="top" class="section section-hero">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="hero-copy-main">想いも情報も、</p>
+            <p class="hero-copy-main hero-copy-main--line2">届く。</p>
+            <p class="hero-copy-sub">つながりを育てる</p>
+            <p class="hero-copy-sub hero-copy-sub--line2">デザインを。</p>
+            <p class="hero-caption">イウミ｜ウェブデザイン</p>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <img class="hero-visual-pillar hero-visual-pillar--right" src="./assets/images/hero-mobile-pillar-right.svg" alt="" />
+            <img class="hero-visual-rose" src="./assets/images/hero-rose-mobile.png" alt="" />
+            <img class="hero-visual-pillar hero-visual-pillar--left" src="./assets/images/hero-mobile-pillar-left.svg" alt="" />
+          </div>
+
+          <img class="hero-logo" src="./assets/images/hero-logo-new.png" alt="" />
+
+          <a class="cta-pill hero-works-cta" href="#works">
+            <span class="cta-pill-label cta-pill-label--default">WORKS</span>
+            <span class="cta-pill-label cta-pill-label--hover" aria-hidden="true">制作したものを見る</span>
+            <img class="cta-pill-arrow cta-pill-arrow--default" src="./assets/images/icon-arrow-works.svg" alt="" />
+            <img class="cta-pill-arrow cta-pill-arrow--hover" src="./assets/images/icon-arrow-works-hover.svg" alt="" />
+          </a>
+        </div>
+      </section>
+
+      <section id="works" class="section section-works">
+        <div class="container">
+          <div class="section-heading section-heading--works">
+            <h2 class="section-title">WORKS</h2>
+            <span class="section-heading-line" aria-hidden="true"></span>
+            <p class="section-subtitle">制作したもの</p>
+          </div>
+
+          <div class="works-grid">
+            <a class="work-card" href="./portfolio.html">
+              <img class="work-corner" src="./assets/images/work-corner.svg" alt="" />
+              <img src="./assets/images/work-lp.png" alt="LPデザイン・広告ビジュアルの制作事例" />
+              <div class="work-card-overlay" aria-hidden="true">
+                <p class="work-card-label">LPデザイン・広告ビジュアル</p>
+              </div>
+            </a>
+            <a class="work-card" href="./banners.html">
+              <img class="work-corner" src="./assets/images/work-corner.svg" alt="" />
+              <img src="./assets/images/work-banners.png" alt="バナーデザイン・SNS画像事例" />
+              <div class="work-card-overlay" aria-hidden="true">
+                <p class="work-card-label">バナーデザイン・SNS画像事例</p>
+              </div>
+            </a>
+            <a class="work-card work-card--soon" href="./memo.html">
+              <img class="work-corner" src="./assets/images/work-corner.svg" alt="" />
+              <img src="./assets/images/work-portfolio.png" alt="このサイトの制作メモ" />
+              <div class="work-card-overlay" aria-hidden="true">
+                <p class="work-card-label">このサイトの制作メモ</p>
+                <p class="work-card-soon">coming soon...</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section section-services">
+        <div class="container">
+          <div class="section-heading section-heading--services">
+            <h2 class="section-title">SERVICES</h2>
+            <span class="section-heading-line section-heading-line--services" aria-hidden="true"></span>
+            <p class="section-subtitle">制作プロセスとご提供内容</p>
+          </div>
+
+          <div class="services-intro">
+            <div class="services-menu">
+              <div class="services-menu__head">
+                <p class="services-menu__headline">
+                  <span class="services-menu__head-en">WEB</span>デザイン承ります
+                </p>
+              </div>
+              <div class="services-menu__body">
+                <div class="services-menu__block">
+                  <p class="services-menu__block-title">
+                    <span class="services-menu__en">Web</span>サイトデザイン
+                  </p>
+                  <p class="services-menu__block-text">
+                    <span class="services-menu__en">LP</span>・サービスサイト・ブランドサイトなど、情報設計からレイアウトまで一貫してデザインします。
+                  </p>
+                </div>
+                <div class="services-menu__block services-menu__block--content">
+                  <p class="services-menu__block-title">
+                    <span class="services-menu__en">Web</span>コンテンツ制作
+                  </p>
+                  <p class="services-menu__block-text">
+                    バナー・<span class="services-menu__en">SNS</span>画像・ヘッダー画像・広告画像など、<span class="services-menu__en">Web</span>で活用する各種コンテンツを制作します。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="services-steps">
+            <article class="service-step service-step--1">
+              <img class="service-step-triangle" src="./assets/images/step-triangle.svg" alt="" />
+              <div class="service-step-icons">
+                <img src="./assets/images/icon-ear.png" alt="" />
+                <img src="./assets/images/icon-comment.png" alt="" />
+              </div>
+              <div class="service-step-body">
+                <h3>ヒアリング</h3>
+                <p>想いや背景を丁寧に、言葉になっていない魅力も一緒に見つけていきます</p>
+              </div>
+            </article>
+            <article class="service-step service-step--2">
+              <img class="service-step-triangle" src="./assets/images/step-triangle.svg" alt="" />
+              <img class="service-step-icon" src="./assets/images/icon-memo.png" alt="" />
+              <div class="service-step-body">
+                <h3>イメージ整理</h3>
+                <p>情報を整理し、伝えたい世界観や印象を明確にします</p>
+              </div>
+            </article>
+            <article class="service-step service-step--3">
+              <img class="service-step-triangle" src="./assets/images/step-triangle.svg" alt="" />
+              <img class="service-step-icon" src="./assets/images/icon-puzzle.png" alt="" />
+              <div class="service-step-body">
+                <h3>
+                  <span class="service-step-title--desktop">レイアウト</span>
+                  <span class="service-step-title--mobile">見せ方づくり</span>
+                </h3>
+                <p>視線の流れを意識し、伝わりやすい構成を組み立てます</p>
+              </div>
+            </article>
+            <article class="service-step service-step--4">
+              <img class="service-step-triangle" src="./assets/images/step-triangle.svg" alt="" />
+              <div class="service-step-icons">
+                <img src="./assets/images/icon-sparkle.png" alt="" />
+                <img src="./assets/images/icon-palette.png" alt="" />
+              </div>
+              <div class="service-step-body">
+                <h3>仕上げ</h3>
+                <p>余白や文字組みを整え、心地よく伝わるデザインに仕上げます</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="services-not">
+            <img src="./assets/images/icon-stop.png" alt="" />
+            <div>
+              <p class="services-not-label">目指していないこと</p>
+              <p class="services-not-text services-not-text--desktop">
+                ▼ 見た目の印象だけを優先　▼ 意図や背景が整理されていない　▼ 短期的なインパクトだけを目的としている
+              </p>
+              <p class="services-not-text services-not-text--mobile">
+                ▼ 見た目の印象だけを優先<br />
+                ▼ 意図や背景が整理されていない<br />
+                ▼ 短期的なインパクトだけを目的としている
+              </p>
+            </div>
+          </div>
+
+          <div class="services-cta-wrap">
+            <img
+              class="services-cta-ellipse"
+              src="./assets/images/services-ellipse-1.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <a class="cta-pill services-contact-cta" href="#contact">
+              <span class="cta-pill-label">まずは相談したい</span>
+              <img class="cta-pill-arrow cta-pill-arrow--default" src="./assets/images/icon-arrow-contact.svg" alt="" />
+              <img class="cta-pill-arrow cta-pill-arrow--hover" src="./assets/images/icon-arrow-contact-hover.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section section-about">
+        <div class="container">
+          <div class="section-heading section-heading--about">
+            <h2 class="section-title">ABOUT ME</h2>
+            <span class="section-heading-line section-heading-line--about" aria-hidden="true"></span>
+            <p class="section-subtitle">私について</p>
+          </div>
+
+          <div class="about-board">
+            <div class="about-intro">
+              <img class="about-corner about-corner--intro" src="./assets/images/about-corner.svg" alt="" />
+              <div class="about-intro-box">
+                <h3><span>iumi</span>（イウミ）</h3>
+                <p class="about-intro-list">
+                  - LP等WEBビジュアルを中心に制作<br />
+                  - 愛知生まれ石川育ち
+                </p>
+                <p class="about-intro-list">- イタリア在住</p>
+                <p class="about-intro-note">
+                  イタリアで目にする光景や人々の感性に触れることも制作の栄養に。
+                  かわいすぎる愛犬を傍に、制作に取り組んでいます。
+                </p>
+              </div>
+            </div>
+
+            <figure class="about-photo">
+              <img
+                src="./assets/images/about-dog.png"
+                width="253"
+                height="353"
+                alt="犬を抱くIUMIのプロフィール写真"
+              />
+            </figure>
+
+            <div class="about-main about-main--desktop">
+              <div class="about-main-frame" aria-hidden="true"></div>
+              <div class="about-main-body">
+                <p>
+                  美容・ウェルネス・住まいに関わる接客の仕事に、約20年携わってきました。小規模サロンから大手スパまでさまざまな現場を経験し、要望の整理や調整など、人と人をつなぐ役割を担うことも多くありました。
+                </p>
+                <p>
+                  仕事をする中でいつも興味があったのは、「相手は本当は何を求めているんだろう？」ということです。
+                </p>
+                <p>
+                  言葉になっていない想いや背景を知り、それを形にしていく過程にやりがいを感じてきました。
+                </p>
+                <p>
+                  個人プロジェクトをきっかけにデザインと出会い、そのおもしろさに惹かれていきました。接客からデザインへと関わり方は変わりましたが、想いや情報を整理し、伝わる形にするという軸は今も変わっていません。
+                </p>
+                <p>
+                  デザインを通して、事業やサービスの魅力が伝わり、その先の出会いや信頼につながることを大切にしています。
+                </p>
+              </div>
+            </div>
+
+            <div class="about-carousel" aria-label="プロフィール詳細">
+              <div class="about-carousel-viewport">
+                <div class="about-carousel-track">
+                  <article class="about-panel">
+                    <div class="about-panel-frame" aria-hidden="true"></div>
+                    <div class="about-panel-body">
+                      <p>
+                        美容・ウェルネス・住まいに関わる接客の仕事に、約20年携わってきました。小規模サロンから大手スパまでさまざまな現場を経験し、要望の整理や調整など、人と人をつなぐ役割を担うことも多くありました。
+                      </p>
+                      <p>
+                        仕事をする中でいつも興味があったのは、<button type="button" class="about-read-more" data-slide="1">…続きを読む</button>
+                      </p>
+                    </div>
+                  </article>
+                  <article class="about-panel">
+                    <div class="about-panel-frame" aria-hidden="true"></div>
+                    <div class="about-panel-body">
+                      <p>「相手は本当は何を求めているんだろう？」ということです。</p>
+                      <p>
+                        言葉になっていない想いや背景を知り、それを形にしていく過程にやりがいを感じてきました。
+                      </p>
+                      <p>
+                        個人プロジェクトをきっかけにデザインと出会い、<button type="button" class="about-read-more" data-slide="2">続きを読む</button>
+                      </p>
+                    </div>
+                  </article>
+                  <article class="about-panel about-panel--last">
+                    <div class="about-panel-frame" aria-hidden="true"></div>
+                    <div class="about-panel-body">
+                      <p>
+                        そのおもしろさに惹かれていきました。接客からデザインへと関わり方は変わりましたが、想いや情報を整理し、伝わる形にするという軸は今も変わっていません。
+                      </p>
+                      <p>
+                        デザインを通して、事業やサービスの魅力が伝わり、その先の出会いや信頼につながることを大切にしています。
+                      </p>
+                      <p>
+                        <button type="button" class="about-read-more about-read-more--close" data-slide="0">戻る</button>
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <img class="about-corner about-corner--about" src="./assets/images/about-corner-2.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-contact">
+        <div class="container contact-grid">
+          <div class="contact-copy">
+            <div class="section-heading section-heading--contact">
+              <h2 class="section-title">CONTACT</h2>
+              <span class="section-heading-line section-heading-line--contact" aria-hidden="true"></span>
+              <p class="section-subtitle">ご相談はこちら</p>
+            </div>
+            <p class="contact-lead">
+              制作内容やご予算に応じてお見積りいたします。<br />
+              まずはお気軽にご相談ください。
+            </p>
+            <p class="contact-brand">イウミ｜ウェブデザイン</p>
+          </div>
+
+          <form
+            class="contact-form"
+            action="https://formsubmit.co/ciao.iumiweb@gmail.com"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="iumi WEB DESIGN サイトお問い合わせ" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" class="contact-form-honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <div class="contact-field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required autocomplete="name" />
+            </div>
+
+            <div class="contact-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required autocomplete="email" />
+            </div>
+
+            <div class="contact-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a href="#top" class="footer-logo" aria-label="iumi WEB DESIGN トップへ戻る">
+          <img src="./assets/images/logo-footer-new.png" alt="" />
+        </a>
+
+        <div class="footer-meta">
+          <nav class="footer-nav" aria-label="フッターナビゲーション">
+            <a href="#top">TOP</a>
+            <a href="#works">WORK</a>
+            <a href="#services">SERVICE</a>
+            <a href="#about">ABOUT</a>
+            <a href="#contact">CONTACT</a>
+          </nav>
+
+          <p class="copyright">© 2026 <span class="copyright-brand">iumi</span> WEB DESIGN</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

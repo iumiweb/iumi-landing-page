@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>このサイトの制作メモ | iumi WEB DESIGN</title>
+    <meta
+      name="description"
+      content="iumi WEB DESIGN ポートフォリオサイトの制作メモ。iumi WEB DESIGN"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./portfolio.css" />
+    <link rel="stylesheet" href="./memo.css" />
+  </head>
+  <body class="portfolio-page memo-page">
+    <header class="portfolio-header">
+      <div class="container portfolio-header-inner">
+        <div class="portfolio-header-brand">
+          <a href="./index.html" class="portfolio-back" aria-label="LPトップへ戻る">
+            <img src="./assets/images/banner-logo-simple.png" alt="" width="200" height="196" />
+          </a>
+        </div>
+        <button class="menu-toggle portfolio-menu-toggle" type="button" aria-expanded="false" aria-controls="portfolio-nav">
+          <img src="./assets/images/icon-hamburger.svg" alt="" />
+          <span class="sr-only">メニューを開く</span>
+        </button>
+        <nav id="portfolio-nav" class="nav portfolio-nav" aria-label="グローバルナビゲーション">
+          <a href="./index.html">TOP</a>
+          <a href="./index.html#works">WORK</a>
+          <a href="./index.html#services">SERVICE</a>
+          <a href="./index.html#about">ABOUT</a>
+          <a href="./index.html#contact">CONTACT</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="portfolio-main memo-main">
+      <section class="portfolio-title memo-title">
+        <div class="container">
+          <h1 class="portfolio-title-main memo-title-main">このサイトの制作メモ</h1>
+        </div>
+      </section>
+
+      <section class="memo-preview" aria-label="制作メモプレビュー">
+        <div class="memo-content memo-preview-inner">
+          <img
+            class="memo-preview-image"
+            src="./assets/images/memo-screenshot.png"
+            alt="サイト制作の参考資料・ワイヤーフレーム"
+            width="1040"
+            height="746"
+          />
+          <div class="memo-preview-overlay" aria-hidden="true">
+            <p class="memo-preview-soon">Coming soon...</p>
+          </div>
+        </div>
+      </section>
+
+      <nav class="portfolio-related memo-related" aria-label="関連リンク">
+        <div class="portfolio-related-inner">
+          <a class="related-nav-link related-nav-link--memo" href="./banners.html">
+            <span class="related-nav-link__text">バナー事例</span>
+            <svg class="related-nav-link__arrow" width="164" height="18" viewBox="0 0 164 18" fill="none" aria-hidden="true">
+              <path d="M163.354 0L0.353553 0M0.707107 0.146447L16.7071 16.1464" stroke="#FFC100" stroke-width="2" />
+            </svg>
+          </a>
+          <a class="related-nav-link related-nav-link--lp" href="./portfolio.html">
+            <span class="related-nav-link__text">LP事例</span>
+            <svg class="related-nav-link__arrow" width="164" height="18" viewBox="0 0 164 18" fill="none" aria-hidden="true">
+              <path d="M0.272 0L163.272 0M162.918 0.146447L146.918 16.1464" stroke="#FFC100" stroke-width="2" />
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a href="./index.html" class="footer-logo" aria-label="iumi WEB DESIGN トップへ戻る">
+          <img src="./assets/images/logo-footer-new.png" alt="" />
+        </a>
+
+        <div class="footer-meta">
+          <nav class="footer-nav" aria-label="フッターナビゲーション">
+            <a href="./index.html">TOP</a>
+            <a href="./index.html#works">WORK</a>
+            <a href="./index.html#services">SERVICE</a>
+            <a href="./index.html#about">ABOUT</a>
+            <a href="./index.html#contact">CONTACT</a>
+          </nav>
+
+          <p class="copyright">© 2026 <span class="copyright-brand">iumi</span> WEB DESIGN</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
