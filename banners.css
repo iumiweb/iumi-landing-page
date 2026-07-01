@@ -373,6 +373,9 @@
     position: relative;
     top: auto;
     left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -397,19 +400,26 @@
   .banner-case-body {
     grid-template-columns: 1fr;
     gap: 16px;
-    padding: 24px 72px 56px 18px;
+    width: min(100%, 304px);
+    max-width: calc(100% - 36px);
+    margin-inline: auto;
+    padding: 24px 0 56px;
+    box-sizing: border-box;
   }
 
   .banner-case--rose .banner-case-body,
   .banner-case--ski .banner-case-body {
-    padding-top: 24px;
-    padding-bottom: 56px;
-    padding-right: 72px;
+    padding: 24px 0 56px;
   }
 
   .banner-case--rose .banner-case-inner,
   .banner-case--ski .banner-case-inner {
     padding-bottom: 40px;
+  }
+
+  .banner-case-col {
+    min-width: 0;
+    text-align: left;
   }
 
   .banner-case-col p:not(.banner-case-label) {

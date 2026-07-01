@@ -124,7 +124,7 @@
 .portfolio-showcase-phone {
   position: absolute;
   left: 71.40625%;
-  top: 529px;
+  top: 379px;
   right: auto;
   bottom: auto;
   width: 27.65625%;
@@ -326,7 +326,7 @@
 
   .portfolio-showcase-phone {
     left: 71.40625%;
-    top: clamp(430px, 41.3vw, 529px);
+    top: clamp(280px, calc(41.3vw - 150px), 379px);
     width: 27.65625%;
     max-width: 354px;
     height: clamp(550px, 56.3vw, 721px);
