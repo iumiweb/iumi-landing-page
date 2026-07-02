@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>送信完了 | iumi WEB DESIGN</title>
+    <meta name="description" content="お問い合わせの送信が完了しました。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .thanks-main {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 40px 20px;
+        background: var(--color-bg-main);
+      }
+
+      .thanks-card {
+        width: min(100%, 720px);
+        padding: 48px 28px;
+        border: 2px solid var(--color-accent);
+        background: var(--color-bg-soft);
+        text-align: center;
+      }
+
+      .thanks-title {
+        margin: 0 0 16px;
+        font-family: var(--font-heading);
+        font-size: clamp(32px, 5vw, 52px);
+        font-weight: 500;
+        color: var(--color-text-main);
+      }
+
+      .thanks-text {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.8;
+        color: var(--color-text-main);
+      }
+
+      .thanks-link {
+        display: inline-block;
+        margin-top: 26px;
+        font-size: 16px;
+        color: var(--color-text-main);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="thanks-main">
+      <section class="thanks-card" aria-label="送信完了">
+        <h1 class="thanks-title">送信ありがとうございました</h1>
+        <p class="thanks-text">
+          お問い合わせ内容を受け付けました。<br />
+          内容を確認のうえ、順次ご連絡いたします。
+        </p>
+        <a class="thanks-link" href="./index.html">トップページへ戻る</a>
+      </section>
+    </main>
+  </body>
+</html>
