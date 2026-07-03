@@ -244,6 +244,12 @@
   max-width: 1040px;
 }
 
+@media (max-width: 900px) {
+  .banners-related .portfolio-related-inner {
+    max-width: 360px;
+  }
+}
+
 @media (max-width: 1280px) {
   .banner-case-inner {
     grid-template-columns: minmax(0, 475px) minmax(0, 696px);
