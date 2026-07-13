@@ -1420,8 +1420,8 @@ a.cta-pill.hero-works-cta {
     overflow-x: clip;
     overscroll-behavior-x: none;
     max-width: 100%;
-    padding-top: 0;
-    margin-top: 0;
+    padding: 0;
+    margin: 0;
   }
 
   a.cta-pill,
@@ -1437,14 +1437,29 @@ a.cta-pill.hero-works-cta {
     overflow-x: clip;
     overscroll-behavior-x: none;
     position: relative;
-    padding-top: 0;
-    margin-top: 0;
+    padding: 0;
+    margin: calc(-1 * env(safe-area-inset-top, 0px)) 0 0;
   }
 
-  main {
+  main,
+  .portfolio-main,
+  .banners-main,
+  .memo-main {
     width: 100%;
     max-width: 100%;
     overflow-x: clip;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .thanks-main {
+    margin-top: 0;
+  }
+
+  .portfolio-title,
+  .banners-title,
+  .memo-title {
+    margin-top: 0;
   }
 
   .section {
