@@ -1422,6 +1422,7 @@ a.cta-pill.hero-works-cta {
     max-width: 100%;
     padding: 0;
     margin: 0;
+    background: var(--color-bg-hero-top);
   }
 
   a.cta-pill,
@@ -1438,7 +1439,13 @@ a.cta-pill.hero-works-cta {
     overscroll-behavior-x: none;
     position: relative;
     padding: 0;
-    margin: calc(-1 * env(safe-area-inset-top, 0px)) 0 0;
+    margin: 0;
+    background: var(--color-bg-hero-top);
+  }
+
+  body.portfolio-page,
+  body.thanks-page {
+    background: var(--color-bg-main);
   }
 
   main,
@@ -1453,7 +1460,9 @@ a.cta-pill.hero-works-cta {
   }
 
   .thanks-main {
-    margin-top: 0;
+    margin-top: calc(-1 * env(safe-area-inset-top, 0px));
+    min-height: calc(100vh + env(safe-area-inset-top, 0px));
+    min-height: calc(100dvh + env(safe-area-inset-top, 0px));
   }
 
   .portfolio-title,
@@ -1491,7 +1500,7 @@ a.cta-pill.hero-works-cta {
   .header {
     width: 100%;
     max-width: 100%;
-    top: 0;
+    top: calc(-1 * env(safe-area-inset-top, 0px));
     padding-top: 0;
     margin-top: 0;
   }
@@ -1510,13 +1519,19 @@ a.cta-pill.hero-works-cta {
   .section-hero {
     width: 100%;
     max-width: 100%;
-    height: 852px;
-    min-height: 852px;
-    max-height: 852px;
-    margin-top: 0;
+    height: calc(852px + env(safe-area-inset-top, 0px));
+    min-height: calc(852px + env(safe-area-inset-top, 0px));
+    max-height: calc(852px + env(safe-area-inset-top, 0px));
+    margin-top: calc(-1 * env(safe-area-inset-top, 0px));
     padding: 0;
     overflow: hidden;
     background: #a9caf8;
+  }
+
+  .section-hero .hero-inner {
+    height: 852px;
+    min-height: 852px;
+    max-height: 852px;
   }
 
   .hero-inner {
