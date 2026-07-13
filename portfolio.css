@@ -335,7 +335,7 @@
 
 @media (max-width: 900px) {
   .portfolio-header {
-    margin-top: calc(-1 * env(safe-area-inset-top, 0px));
+    margin-top: calc(-1 * var(--safe-top, 0px));
     padding-top: 0;
   }
 

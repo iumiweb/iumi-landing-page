@@ -25,6 +25,7 @@
   --space-section-mobile: 64px;
   --radius-pill: 60px;
   --shadow-work: 0 20px 10px rgba(201, 195, 184, 0.5);
+  --safe-top: 0px;
 }
 
 *,
@@ -1460,9 +1461,9 @@ a.cta-pill.hero-works-cta {
   }
 
   .thanks-main {
-    margin-top: calc(-1 * env(safe-area-inset-top, 0px));
-    min-height: calc(100vh + env(safe-area-inset-top, 0px));
-    min-height: calc(100dvh + env(safe-area-inset-top, 0px));
+    margin-top: calc(-1 * var(--safe-top, 0px));
+    min-height: calc(100vh + var(--safe-top, 0px));
+    min-height: calc(100dvh + var(--safe-top, 0px));
   }
 
   .portfolio-title,
@@ -1500,7 +1501,7 @@ a.cta-pill.hero-works-cta {
   .header {
     width: 100%;
     max-width: 100%;
-    top: calc(-1 * env(safe-area-inset-top, 0px));
+    top: calc(-1 * var(--safe-top, 0px));
     padding-top: 0;
     margin-top: 0;
   }
@@ -1519,10 +1520,10 @@ a.cta-pill.hero-works-cta {
   .section-hero {
     width: 100%;
     max-width: 100%;
-    height: calc(852px + env(safe-area-inset-top, 0px));
-    min-height: calc(852px + env(safe-area-inset-top, 0px));
-    max-height: calc(852px + env(safe-area-inset-top, 0px));
-    margin-top: calc(-1 * env(safe-area-inset-top, 0px));
+    height: calc(852px + var(--safe-top, 0px));
+    min-height: calc(852px + var(--safe-top, 0px));
+    max-height: calc(852px + var(--safe-top, 0px));
+    margin-top: calc(-1 * var(--safe-top, 0px));
     padding: 0;
     overflow: hidden;
     background: #a9caf8;
