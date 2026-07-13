@@ -334,6 +334,11 @@
 }
 
 @media (max-width: 900px) {
+  .portfolio-header {
+    padding-top: 0;
+    margin-top: 0;
+  }
+
   .portfolio-header .container {
     width: min(100% - 40px, 760px);
   }

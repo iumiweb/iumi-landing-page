@@ -1420,6 +1420,8 @@ a.cta-pill.hero-works-cta {
     overflow-x: clip;
     overscroll-behavior-x: none;
     max-width: 100%;
+    padding-top: 0;
+    margin-top: 0;
   }
 
   a.cta-pill,
@@ -1435,6 +1437,8 @@ a.cta-pill.hero-works-cta {
     overflow-x: clip;
     overscroll-behavior-x: none;
     position: relative;
+    padding-top: 0;
+    margin-top: 0;
   }
 
   main {
@@ -1472,6 +1476,9 @@ a.cta-pill.hero-works-cta {
   .header {
     width: 100%;
     max-width: 100%;
+    top: 0;
+    padding-top: 0;
+    margin-top: 0;
   }
 
   .header .header-inner {
@@ -1491,6 +1498,7 @@ a.cta-pill.hero-works-cta {
     height: 852px;
     min-height: 852px;
     max-height: 852px;
+    margin-top: 0;
     padding: 0;
     overflow: hidden;
     background: #a9caf8;
