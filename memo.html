@@ -13,14 +13,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./portfolio.css" />
     <link rel="stylesheet" href="./memo.css" />
   </head>
-  <body class="portfolio-page memo-page">
+  <body class="portfolio-page memo-page" style="--page-top-bg: #ffffff; --page-bottom-bg: #7b8a8a;">
     <header class="portfolio-header">
       <div class="container portfolio-header-inner">
         <div class="portfolio-header-brand">
@@ -29,7 +29,8 @@
           </a>
         </div>
         <button class="menu-toggle portfolio-menu-toggle" type="button" aria-expanded="false" aria-controls="portfolio-nav">
-          <img src="./assets/images/icon-hamburger.svg" alt="" />
+          <img class="menu-toggle-icon menu-toggle-icon--open" src="./assets/images/icon-hamburger.svg" alt="" />
+          <img class="menu-toggle-icon menu-toggle-icon--close" src="./assets/images/icon-menu-close.svg" alt="" />
           <span class="sr-only">メニューを開く</span>
         </button>
         <nav id="portfolio-nav" class="nav portfolio-nav" aria-label="グローバルナビゲーション">

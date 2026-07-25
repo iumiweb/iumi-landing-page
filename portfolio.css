@@ -14,7 +14,7 @@
 
 .portfolio-header {
   position: relative;
-  z-index: 20;
+  z-index: 50;
 }
 
 .portfolio-header .container {
@@ -336,26 +336,45 @@
 @media (max-width: 900px) {
   .portfolio-header {
     margin-top: calc(-1 * var(--safe-top, 0px));
-    padding-top: 0;
+    padding-top: var(--safe-top, 0px);
   }
 
   .portfolio-header .container {
-    width: min(100% - 40px, 760px);
+    width: 100%;
+    max-width: 100%;
+    padding-inline: 0;
   }
 
   .portfolio-header-inner {
-    align-items: center;
-    padding-top: 46px;
+    position: relative;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 393px;
+    margin: 0 auto;
+    min-height: 108px;
+    padding: 20px 64px 0 24px;
+    box-sizing: border-box;
+  }
+
+  .portfolio-back {
+    width: 90px;
   }
 
   .portfolio-back img {
-    width: 120px;
+    width: 90px;
+    height: auto;
   }
 
   .portfolio-menu-toggle {
     display: inline-flex;
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    z-index: 60;
     width: 54px;
     height: 43px;
+    margin: 0;
     align-items: center;
     justify-content: center;
     border: 0;
@@ -366,25 +385,74 @@
 
   .portfolio-nav {
     position: fixed;
-    inset: 0;
-    z-index: 30;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 45;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-    padding-top: 0;
-    background: rgba(1, 39, 62, 0.92);
-    color: var(--color-text-light);
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 40px;
+    width: 100%;
+    height: 600px;
+    padding: 141px 41px 40px;
+    background: rgba(244, 242, 236, 0.95);
+    color: var(--color-text-main);
+    font-family: var(--font-heading);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.45;
+    text-align: left;
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
     transition:
-      opacity 0.3s ease,
-      visibility 0.3s ease;
+      opacity 0.35s ease,
+      visibility 0.35s ease;
+  }
+
+  .portfolio-nav a {
+    color: var(--color-text-main);
+    font-family: var(--font-heading);
   }
 
   .portfolio-nav.is-open {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
+  }
+
+  .portfolio-nav.is-fading {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .portfolio-menu-toggle {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    z-index: 60;
+  }
+
+  .portfolio-menu-toggle .menu-toggle-icon {
+    display: block;
+    width: 54px;
+    height: 43px;
+  }
+
+  .portfolio-menu-toggle .menu-toggle-icon--close {
+    display: none;
+    width: 53px;
+    height: 30px;
+  }
+
+  .portfolio-menu-toggle.is-open .menu-toggle-icon--open {
+    display: none;
+  }
+
+  .portfolio-menu-toggle.is-open .menu-toggle-icon--close {
+    display: block;
   }
 
   .portfolio-title {

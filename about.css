@@ -1,0 +1,128 @@
+/* About detail page */
+
+.page-about {
+  background: #c9c3b8;
+}
+
+.about-detail-main {
+  width: min(100%, 393px);
+  margin: 0 auto;
+  padding: 42px 24px 72px;
+  box-sizing: border-box;
+}
+
+.about-detail-card {
+  width: 100%;
+  max-width: 345px;
+  margin: 0 auto;
+  padding: 39px 28px 48px;
+  border: 1px solid var(--color-bg-soft);
+  backdrop-filter: blur(2px);
+  box-sizing: border-box;
+}
+
+.about-detail-greeting {
+  margin: 0 0 40px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0.48px;
+  color: var(--color-text-main);
+}
+
+.about-detail-photo {
+  margin: 0 auto 40px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.about-detail-photo:last-of-type {
+  margin-bottom: 0;
+}
+
+.about-detail-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 250 / 188;
+  object-fit: cover;
+}
+
+.about-detail-body {
+  margin: 0 0 40px;
+  font-family: var(--font-zen);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.48px;
+  color: var(--color-text-main);
+}
+
+.about-detail-body p {
+  margin: 0 0 1em;
+}
+
+.about-detail-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Figma: card bottom → CTA 72px, CTA centered between card and footer */
+.about-detail-cta {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 72px 0 0;
+  min-height: 109px;
+}
+
+.about-detail-cta a.cta-pill.hero-works-cta {
+  position: relative;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  transform: none;
+  margin: 0;
+  width: 199px;
+  height: 109px;
+  background: rgba(206, 200, 194, 0.2);
+  box-shadow: 0 10px 10px rgba(123, 138, 138, 0.15);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  overflow: hidden;
+}
+
+.about-detail-cta a.cta-pill.hero-works-cta::before {
+  opacity: 1;
+  background: rgba(255, 193, 0, 0.6);
+}
+
+.about-detail-cta a.cta-pill.hero-works-cta.is-pressed::before {
+  background: rgba(255, 193, 0, 1);
+}
+
+.about-detail-cta .cta-pill-arrow-track {
+  opacity: 1;
+}
+
+@media (min-width: 901px) {
+  .about-detail-main {
+    width: min(100% - 80px, 720px);
+    padding: 80px 40px 120px;
+  }
+
+  .about-detail-card {
+    max-width: 560px;
+    padding: 56px 48px;
+  }
+
+  .about-detail-photo {
+    max-width: 360px;
+  }
+
+  .about-detail-cta {
+    margin-top: 80px;
+  }
+}

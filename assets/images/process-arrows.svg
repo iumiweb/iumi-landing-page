@@ -1,0 +1,50 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="98" height="676.579" viewBox="0 0 98 676.579" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="arrows">
+<g id="Union" filter="url(#filter0_f_0_15)">
+<path d="M49 35.5791L4 4H94L49 35.5791Z" fill="#FFC100" fill-opacity="0.4"/>
+</g>
+<g id="Union_2" filter="url(#filter1_f_0_15)">
+<path d="M49 238.579L4 207H94L49 238.579Z" fill="#FFC100" fill-opacity="0.4"/>
+</g>
+<g id="Union_3" filter="url(#filter2_f_0_15)">
+<path d="M49 441.579L4 410H94L49 441.579Z" fill="#FFC100" fill-opacity="0.4"/>
+</g>
+<g id="Union_4" filter="url(#filter3_f_0_15)">
+<path d="M49 672.579L4 641H94L49 672.579Z" fill="#FFC100" fill-opacity="0.4"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_0_15" x="0" y="0" width="98" height="39.5791" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_0_15"/>
+</filter>
+<filter id="filter1_f_0_15" x="0" y="203" width="98" height="39.5791" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_0_15"/>
+</filter>
+<filter id="filter2_f_0_15" x="0" y="406" width="98" height="39.5791" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_0_15"/>
+</filter>
+<filter id="filter3_f_0_15" x="0" y="637" width="98" height="39.5791" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_0_15"/>
+</filter>
+<g id="stroke0_0_15" data-figma-scatter-ref="stroke0_0_15_ref" data-figma-scatter="f0.25_w0_aj95_sj0_r45_s5352770015574133254_sw3">
+</g>
+<path id="stroke0_0_15_ref" d="M49 35.5791L4 4H94L49 35.5791Z"/>
+<g id="stroke1_0_15" data-figma-scatter-ref="stroke1_0_15_ref" data-figma-scatter="f0.25_w0_aj95_sj0_r45_s5352770015574133254_sw3">
+</g>
+<path id="stroke1_0_15_ref" d="M49 238.579L4 207H94L49 238.579Z"/>
+<g id="stroke2_0_15" data-figma-scatter-ref="stroke2_0_15_ref" data-figma-scatter="f0.25_w0_aj95_sj0_r45_s5352770015574133254_sw3">
+</g>
+<path id="stroke2_0_15_ref" d="M49 441.579L4 410H94L49 441.579Z"/>
+<g id="stroke3_0_15" data-figma-scatter-ref="stroke3_0_15_ref" data-figma-scatter="f0.25_w0_aj95_sj0_r45_s5352770015574133254_sw3">
+</g>
+<path id="stroke3_0_15_ref" d="M49 672.579L4 641H94L49 672.579Z"/>
+</defs>
+</svg>
