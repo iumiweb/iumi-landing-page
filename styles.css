@@ -197,6 +197,17 @@ a {
   flex-shrink: 0;
 }
 
+.detail-header--centered .detail-header-inner {
+  justify-content: center;
+}
+
+.detail-header--centered .detail-logo {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+}
+
 .nav {
   display: flex;
   gap: 48px;
@@ -2128,18 +2139,24 @@ a.cta-pill.hero-works-cta {
   .services-offer-frame {
     width: 100%;
     margin-top: 45px;
-    padding: 0 0 40px;
-    border: 1px solid var(--color-accent);
-    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .services-offer {
     position: relative;
-    padding-bottom: 24px;
+    width: 100%;
+    min-height: 360px;
+    padding: 0 0 24px;
+    border: 1px solid var(--color-accent);
+    box-sizing: border-box;
   }
 
   .services-offer + .services-offer {
-    margin-top: 24px;
+    margin-top: 0;
   }
 
   .services-offer-head {
@@ -2192,7 +2209,7 @@ a.cta-pill.hero-works-cta {
   .services-offer-text {
     width: 288px;
     max-width: calc(100% - 40px);
-    margin: 12px auto 0;
+    margin: 18px auto 0;
     font-size: 16px;
     font-weight: 400;
     line-height: 40px;
@@ -2573,6 +2590,18 @@ a.cta-pill.hero-works-cta {
     min-height: 108px;
     padding: 20px 64px 0 24px;
     box-sizing: border-box;
+  }
+
+  .detail-header--centered .detail-header-inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .detail-header--centered .detail-logo {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
   }
 
   .detail-logo {

@@ -7,7 +7,7 @@
 .services-detail-main {
   width: min(100%, 393px);
   margin: 0 auto;
-  padding: 48px 24px 100px;
+  padding: 62px 24px 100px;
   box-sizing: border-box;
 }
 
@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 56px;
+  margin-bottom: 46px;
   text-align: center;
 }
 
@@ -38,17 +38,33 @@
   white-space: nowrap;
 }
 
-.services-detail-banner {
-  display: grid;
-  place-items: center;
+.services-side-title {
+  position: relative;
+  display: flex;
+  align-items: center;
   width: 100%;
   max-width: 345px;
-  height: 60px;
-  margin: 0 auto 48px;
-  background: rgba(169, 202, 248, 0.4);
-  font-family: var(--font-heading);
+  min-height: 45px;
+  margin: 0 auto 60px;
+  padding-left: 22px;
+  box-sizing: border-box;
+}
+
+.services-side-title-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 45px;
+  background: var(--color-accent);
+}
+
+.services-side-title h2 {
+  margin: 0;
+  font-family: var(--font-body);
   font-size: 24px;
   font-weight: 400;
+  line-height: 24px;
   color: var(--color-text-main);
   text-shadow: 0 2px 4px rgba(123, 138, 138, 0.6);
 }
@@ -58,54 +74,66 @@
   margin: 0 auto;
   padding: 0;
   width: 100%;
-  max-width: 325px;
+  max-width: 345px;
   display: flex;
   flex-direction: column;
-  gap: 112px;
+  gap: 51px;
 }
 
-.process-item {
-  display: grid;
-  grid-template-columns: 99px minmax(0, 209px);
-  column-gap: 17px;
-  align-items: start;
+.process-card {
   position: relative;
+  width: 100%;
+  padding-top: 16px;
+  box-sizing: border-box;
 }
 
-.process-item:not(:last-child)::after {
-  content: "";
+.process-card-heading {
   position: absolute;
-  left: 35px;
-  top: calc(90px + 28px);
-  width: 28px;
-  height: 28px;
-  background: var(--color-accent);
-  clip-path: polygon(50% 100%, 0 0, 100% 0);
-}
-
-.process-icon {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-  justify-self: start;
-}
-
-.process-body {
-  padding-top: 0;
-  min-width: 0;
-}
-
-.process-body h2 {
-  margin: 0 0 4px;
+  top: 1px;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  width: 220px;
+  height: 30px;
+  margin: 0;
+  padding: 0 12px;
+  box-sizing: border-box;
+  background: var(--color-bg-footer);
+  color: var(--color-text-light);
   font-family: var(--font-body);
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
   letter-spacing: 0.48px;
-  color: var(--color-text-main);
+  white-space: nowrap;
 }
 
-.process-body p {
+.process-card-index {
+  font-variant-numeric: tabular-nums;
+}
+
+.process-card-body {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 206px);
+  column-gap: 19px;
+  align-items: start;
+  width: 100%;
+  min-height: 150px;
+  padding: 38px 18px 22px;
+  border: 1px solid var(--color-bg-hero-top);
+  box-sizing: border-box;
+}
+
+.process-card-icon {
+  display: block;
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.process-card-body p {
   margin: 0;
   font-family: var(--font-zen);
   font-size: 16px;
@@ -116,13 +144,14 @@
 }
 
 .services-detail-block + .services-detail-block {
-  margin-top: 108px;
+  margin-top: 114px;
 }
 
 .pricing-copy {
   width: 100%;
-  max-width: 288px;
+  max-width: 300px;
   margin: 0 auto;
+  font-family: var(--font-body);
   font-size: 16px;
   font-weight: 400;
   line-height: 35px;
@@ -138,13 +167,19 @@
   margin-bottom: 0;
 }
 
+.pricing-label {
+  font-weight: 500;
+}
+
 .tools-box {
   width: 100%;
   max-width: 345px;
-  margin: 80px auto 0;
+  height: 109px;
+  margin: 57px auto 0;
   padding: 18px 19px;
   border: 1px solid var(--color-bg-footer);
   box-sizing: border-box;
+  font-family: var(--font-body);
   font-size: 20px;
   font-weight: 400;
   line-height: 35px;
@@ -163,7 +198,7 @@
 .services-detail-cta {
   display: flex;
   justify-content: center;
-  margin-top: 96px;
+  margin-top: 58px;
 }
 
 .services-detail-cta .services-contact-cta {
@@ -177,14 +212,14 @@
     padding: 80px 40px 120px;
   }
 
-  .process-list {
+  .process-list,
+  .services-side-title,
+  .pricing-copy,
+  .tools-box {
     max-width: 520px;
-    gap: 120px;
   }
 
-  .pricing-copy,
-  .tools-box,
-  .services-detail-banner {
-    max-width: 520px;
+  .process-card-body {
+    grid-template-columns: 90px 1fr;
   }
 }
