@@ -95,7 +95,7 @@
   display: flex;
   align-items: center;
   gap: 0.25em;
-  width: 220px;
+  width: 200px;
   height: 30px;
   margin: 0;
   padding: 0 12px;
@@ -147,20 +147,47 @@
   margin-top: 114px;
 }
 
-.pricing-copy {
+.services-detail-block + .services-detail-block > .services-side-title {
+  margin-bottom: 55px;
+}
+
+.pricing-estimate {
   width: 100%;
-  max-width: 300px;
+  max-width: 345px;
+  height: 88px;
   margin: 0 auto;
+  padding: 10px 22px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(169, 202, 248, 0.6);
   font-family: var(--font-body);
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 35px;
   letter-spacing: 0.48px;
   color: var(--color-text-main);
 }
 
+.pricing-estimate p {
+  margin: 0;
+}
+
+.pricing-copy {
+  width: 100%;
+  max-width: 313px;
+  margin: 25px auto 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.48px;
+  color: var(--color-text-main);
+}
+
 .pricing-copy p {
-  margin: 0 0 35px;
+  margin: 0 0 30px;
 }
 
 .pricing-copy p:last-child {
@@ -171,11 +198,23 @@
   font-weight: 500;
 }
 
+.pricing-note {
+  width: 100%;
+  max-width: 313px;
+  margin: 38px auto 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 0.48px;
+  color: var(--color-text-main);
+}
+
 .tools-box {
   width: 100%;
   max-width: 345px;
   height: 109px;
-  margin: 57px auto 0;
+  margin: 71px auto 0;
   padding: 18px 19px;
   border: 1px solid var(--color-bg-footer);
   box-sizing: border-box;
@@ -214,7 +253,9 @@
 
   .process-list,
   .services-side-title,
+  .pricing-estimate,
   .pricing-copy,
+  .pricing-note,
   .tools-box {
     max-width: 520px;
   }

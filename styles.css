@@ -2247,26 +2247,33 @@ a.cta-pill.hero-works-cta {
   }
 
   .section-about {
-    padding: 100px 0 80px;
+    padding: 100px 0 35px;
     min-height: auto;
     overflow-x: clip;
     background: var(--color-bg-about);
   }
 
   .section-about .section-heading {
-    margin-bottom: 50px;
+    height: 59px;
+    margin-bottom: 78px;
   }
 
   .section-about .section-title {
     font-size: 36px;
+    line-height: 36px;
+    height: 36px;
     color: var(--color-text-main);
   }
 
+  .section-about .section-heading-line {
+    margin-top: 0;
+  }
+
   .section-about .section-subtitle {
-    margin-top: 8px;
+    margin-top: 0;
     font-size: 16px;
     font-weight: 500;
-    line-height: 1.3;
+    line-height: 19px;
     letter-spacing: 0.48px;
   }
 
@@ -2275,23 +2282,29 @@ a.cta-pill.hero-works-cta {
     overflow: visible;
   }
 
+  /* Figma about (1698:253): content origin x=10 within 393 */
   .about-mobile {
-    width: 100%;
-    max-width: 345px;
-    margin: 0 auto;
+    position: relative;
+    width: 374px;
+    max-width: calc(100% + 29px);
+    margin: 0 0 0 -14px;
   }
 
-  .about-mobile-card {
+  /* io frame: 374x300 */
+  .about-mobile-profile {
     position: relative;
-    width: 100%;
-    padding: 47px 28px 40px;
-    border: 1px solid var(--color-bg-soft);
-    backdrop-filter: blur(2px);
-    box-sizing: border-box;
+    width: 374px;
+    height: 300px;
+    margin: 0;
   }
 
   .about-mobile-name {
-    margin: 0 auto 20px;
+    position: absolute;
+    left: 79px;
+    top: 0;
+    z-index: 3;
+    width: 211px;
+    margin: 0;
     font-family: var(--font-heading);
     font-size: 36px;
     font-weight: 400;
@@ -2300,42 +2313,44 @@ a.cta-pill.hero-works-cta {
     color: var(--color-text-main);
   }
 
-  .about-mobile-photo {
-    position: relative;
-    width: 100%;
-    max-width: 357px;
-    height: 300px;
-    margin: 0 auto 24px;
-  }
-
   .section-heading-line--about {
     max-width: 160px;
     background: #f4f2ec;
   }
 
+  /*
+    Ellipse 5 wrapper in Figma: 283x200 at (0,46),
+    inner SVG 272.287x183.013 centered, then rotate -3.55deg
+  */
   .about-mobile-blob {
     position: absolute;
-    left: -27px;
-    top: 0;
-    width: 283px;
-    height: 200px;
-    object-fit: contain;
+    left: 5.4px;
+    top: 54.5px;
+    width: 272.287px;
+    height: 183.013px;
+    object-fit: fill;
+    transform: rotate(-3.55deg);
+    transform-origin: center center;
+    z-index: 0;
   }
 
+  /* image2-2: left 206, top 66, 168x234 */
   .about-mobile-portrait {
     position: absolute;
-    right: -27px;
-    top: 20px;
+    left: 206px;
+    top: 66px;
     width: 168px;
     height: 234px;
     object-fit: cover;
+    object-position: center top;
     z-index: 1;
   }
 
+  /* meta: left 61, top 103 */
   .about-mobile-meta {
     position: absolute;
-    left: 28px;
-    top: 57px;
+    left: 61px;
+    top: 103px;
     z-index: 2;
     margin: 0;
     width: 158px;
@@ -2346,10 +2361,34 @@ a.cta-pill.hero-works-cta {
     color: var(--color-text-main);
   }
 
+  /* intro frame: 370x487, top 515 vs io end 537 → overlap 22px */
+  .about-mobile-frame {
+    position: relative;
+    width: 370px;
+    height: 487px;
+    margin: -22px 0 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .about-mobile-frame-ellipse {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 370px;
+    height: 487px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* body text: left 45, top 78, 282 wide */
   .about-mobile-body {
-    width: 100%;
-    max-width: 288px;
-    margin: 0 auto;
+    position: absolute;
+    left: 45px;
+    top: 78px;
+    z-index: 1;
+    width: 282px;
+    margin: 0;
     font-family: var(--font-zen);
     font-size: 16px;
     font-weight: 400;
@@ -2359,32 +2398,45 @@ a.cta-pill.hero-works-cta {
   }
 
   .about-mobile-body p {
-    margin: 0 0 1em;
+    margin: 0;
   }
 
-  .about-mobile-body p:last-child {
-    margin-bottom: 0;
+  /* next: left 104, top 405 within intro */
+  .about-mobile-frame .about-more-link {
+    position: absolute;
+    left: 104px;
+    top: 405px;
+    bottom: auto;
+    z-index: 2;
+    width: 163px;
+    margin: 0;
+    transform: none;
+    gap: 4px;
   }
 
-  .about-mobile-card .text-link {
-    margin-top: 36px;
+  .about-mobile-frame .about-more-link span {
+    line-height: 30px;
   }
 
+  /* insta: x=105 → 95 within about-mobile; gap after intro 42px */
   .about-insta {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 184px;
+    margin: 42px 0 0 95px;
     gap: 8px;
-    margin-top: 36px;
   }
 
   .about-insta p {
     margin: 0;
+    width: 184px;
     font-family: var(--font-zen);
     font-size: 12px;
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 1.2px;
+    text-align: center;
     color: var(--color-text-main);
   }
 
