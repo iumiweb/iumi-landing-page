@@ -2064,12 +2064,6 @@ a.cta-pill.hero-works-cta {
     color: var(--color-text-main);
   }
 
-  .works-cta-wrap {
-    display: flex !important;
-    justify-content: center;
-    margin-top: 74px;
-  }
-
   .section-services {
     padding: 100px 0 100px;
     background: var(--color-bg-soft);
