@@ -31,7 +31,7 @@
 }
 
 .services-detail-title .section-subtitle {
-  margin-top: 8px;
+  margin-top: 1px;
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.48px;
@@ -123,6 +123,7 @@
   min-height: 150px;
   padding: 38px 18px 22px;
   border: 1px solid var(--color-bg-hero-top);
+  border-radius: 0 30px 30px 30px;
   box-sizing: border-box;
 }
 
@@ -143,11 +144,37 @@
   color: var(--color-text-main);
 }
 
-.services-detail-block + .services-detail-block {
-  margin-top: 114px;
+/* tools: after process (Figma gap ~84px) */
+.tools-box {
+  width: 100%;
+  max-width: 345px;
+  height: 109px;
+  margin: 84px auto 0;
+  padding: 18px 19px;
+  border: 1px solid var(--color-bg-footer);
+  box-sizing: border-box;
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 0.6px;
+  color: var(--color-text-main);
 }
 
-.services-detail-block + .services-detail-block > .services-side-title {
+.tools-box p {
+  margin: 0;
+}
+
+.tools-box-en {
+  font-family: var(--font-heading);
+}
+
+/* pricing after tools (Figma gap ~84px) */
+.tools-box + .services-detail-block--pricing {
+  margin-top: 84px;
+}
+
+.services-detail-block--pricing > .services-side-title {
   margin-bottom: 55px;
 }
 
@@ -210,39 +237,22 @@
   color: var(--color-text-main);
 }
 
-.tools-box {
-  width: 100%;
-  max-width: 345px;
-  height: 109px;
-  margin: 71px auto 0;
-  padding: 18px 19px;
-  border: 1px solid var(--color-bg-footer);
-  box-sizing: border-box;
-  font-family: var(--font-body);
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 35px;
-  letter-spacing: 0.6px;
-  color: var(--color-text-main);
-}
-
-.tools-box p {
-  margin: 0;
-}
-
-.tools-box-en {
-  font-family: var(--font-heading);
-}
-
 .services-detail-cta {
   display: flex;
   justify-content: center;
-  margin-top: 58px;
+  margin-top: 100px;
 }
 
 .services-detail-cta .services-contact-cta {
   width: 300px;
   height: 80px;
+}
+
+.services-detail-cta .services-contact-cta .cta-pill-label {
+  font-family: var(--font-zen);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
 }
 
 @media (min-width: 901px) {
