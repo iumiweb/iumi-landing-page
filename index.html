@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20260805h" />
   </head>
   <body class="page-home" style="--page-top-bg: #a9caf8; --page-bottom-bg: #7b8a8a;">
     <header class="header">
@@ -66,10 +66,12 @@
           <a class="hero-scroll-cta" href="#works" aria-label="下にスクロール">
             <span class="hero-scroll-label">scroll</span>
             <span class="hero-scroll-arrows" aria-hidden="true">
-              <img class="hero-scroll-arrow hero-scroll-arrow--mobile" src="./assets/images/hero-scroll-arrow-1.svg" alt="" width="102" height="32" />
-              <img class="hero-scroll-arrow hero-scroll-arrow--mobile" src="./assets/images/hero-scroll-arrow-2.svg" alt="" width="102" height="32" />
-              <img class="hero-scroll-arrow hero-scroll-arrow--desktop" src="./assets/images/hero-scroll-arrow-desktop-1.svg" alt="" width="102" height="32" />
-              <img class="hero-scroll-arrow hero-scroll-arrow--desktop" src="./assets/images/hero-scroll-arrow-desktop-2.svg" alt="" width="102" height="32" />
+              <img class="hero-scroll-arrow hero-scroll-arrow--mobile hero-scroll-arrow--1" src="./assets/images/hero-scroll-arrow-1.svg" alt="" width="102" height="32" />
+              <img class="hero-scroll-arrow hero-scroll-arrow--mobile hero-scroll-arrow--2" src="./assets/images/hero-scroll-arrow-2.svg" alt="" width="102" height="32" />
+              <img class="hero-scroll-arrow hero-scroll-arrow--desktop hero-scroll-arrow--1 hero-scroll-arrow--default" src="./assets/images/hero-scroll-arrow-desktop-1.svg" alt="" width="102" height="32" />
+              <img class="hero-scroll-arrow hero-scroll-arrow--desktop hero-scroll-arrow--2 hero-scroll-arrow--default" src="./assets/images/hero-scroll-arrow-desktop-2.svg" alt="" width="102" height="32" />
+              <img class="hero-scroll-arrow hero-scroll-arrow--desktop hero-scroll-arrow--1 hero-scroll-arrow--hover" src="./assets/images/hero-scroll-arrow-desktop-1-hover.svg" alt="" width="102" height="32" />
+              <img class="hero-scroll-arrow hero-scroll-arrow--desktop hero-scroll-arrow--2 hero-scroll-arrow--hover" src="./assets/images/hero-scroll-arrow-desktop-2-hover.svg" alt="" width="102" height="32" />
             </span>
           </a>
         </div>
@@ -168,7 +170,7 @@
           <div class="services-offers">
             <div class="services-lead-box">
               <p>
-                LPを中心に、サービスやブランドの想いを整理し、<span class="services-lead-mark">伝わるWebデザイン</span>を制作しています。
+                LPを中心に、<br class="desktop-only" />サービスやブランド<br class="desktop-only" />の想いを整理し、<br class="desktop-only" /><span class="services-lead-mark">伝わるWebデザイン</span><br class="desktop-only" />を制作しています。
               </p>
             </div>
 
@@ -235,7 +237,7 @@
             </div>
 
             <div class="about-desktop-intro">
-              <img class="about-desktop-frame" src="./assets/images/about-body-frame.svg" alt="" aria-hidden="true" />
+              <img class="about-desktop-frame" src="./assets/images/about-body-frame.svg?v=2" alt="" aria-hidden="true" />
               <div class="about-desktop-body">
                 <p>大切にしている想いやサービスの魅力が伝わり、その先の出会いやつながりが育っていく。</p>
                 <p>そんなデザインを目指しています。</p>
@@ -245,7 +247,7 @@
               </div>
               <a class="text-link about-more-link" href="./about.html">
                 <span>続きを読む</span>
-                <img src="./assets/images/icon-about-arrow.svg" alt="" />
+                <img src="./assets/images/icon-about-arrow.svg?v=2" alt="" />
               </a>
             </div>
 
@@ -278,7 +280,7 @@
             <div class="about-mobile-frame">
               <img
                 class="about-mobile-frame-ellipse"
-                src="./assets/images/about-body-frame.svg"
+                src="./assets/images/about-body-frame.svg?v=2"
                 alt=""
                 aria-hidden="true"
               />
@@ -294,7 +296,7 @@
               </div>
               <a class="text-link about-more-link" href="./about.html">
                 <span>続きを読む</span>
-                <img src="./assets/images/icon-about-arrow.svg" alt="" />
+                <img src="./assets/images/icon-about-arrow.svg?v=2" alt="" />
               </a>
             </div>
 
@@ -324,10 +326,17 @@
 
           <div class="contact-grid">
             <div class="contact-copy">
-              <p class="contact-lead">
+              <p class="contact-lead contact-lead--desktop desktop-only">
                 まずはお気軽にご相談ください。<br />
-                サービスやブランドについてのお話を伺いながら、<br class="mobile-only" />
+                サービスやブランドについてのお話を伺いながら、<br />
                 どのようなお手伝いができるか一緒に整理していきます。
+              </p>
+              <p class="contact-lead contact-lead--mobile mobile-only">
+                まずはお気軽にご相談ください。<br />
+                サービスやブランドについての<br />
+                お話を伺いながら、<br />
+                どのようなお手伝いができるか<br />
+                一緒に整理していきます。
               </p>
 
               <div class="contact-flow" aria-label="お問い合わせ後の流れ">

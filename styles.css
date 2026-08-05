@@ -1336,6 +1336,12 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     transform: none;
     text-decoration: none;
     color: #f4f2ec;
+    transition: color 0.25s ease;
+  }
+
+  .hero-scroll-cta:hover,
+  .hero-scroll-cta:focus-visible {
+    color: var(--color-accent);
   }
 
   .hero-scroll-label {
@@ -1361,18 +1367,37 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     display: block;
     width: 102px;
     height: 32px;
+    opacity: 1;
   }
 
   .hero-scroll-arrow--mobile {
     display: none;
   }
 
-  .hero-scroll-arrow--desktop:nth-of-type(3) {
+  .hero-scroll-arrow--desktop {
+    display: block;
+  }
+
+  .hero-scroll-arrow--1 {
     top: 0;
   }
 
-  .hero-scroll-arrow--desktop:nth-of-type(4) {
+  .hero-scroll-arrow--2 {
     top: 16px;
+  }
+
+  .hero-scroll-arrow--hover {
+    opacity: 0;
+  }
+
+  .hero-scroll-cta:hover .hero-scroll-arrow--default,
+  .hero-scroll-cta:focus-visible .hero-scroll-arrow--default {
+    opacity: 0;
+  }
+
+  .hero-scroll-cta:hover .hero-scroll-arrow--hover,
+  .hero-scroll-cta:focus-visible .hero-scroll-arrow--hover {
+    opacity: 1;
   }
 
   .about-main,
@@ -1425,7 +1450,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     margin: 0;
     font-family: var(--font-body);
     font-size: 16px;
-    font-weight: 350;
+    font-weight: 400;
     line-height: 25px;
     color: var(--color-text-main);
   }
@@ -1464,8 +1489,8 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     width: 345px;
     min-height: 360px;
     margin: 0;
-    padding: 59px 24px 40px;
-    border: 3px solid var(--color-accent);
+    padding: 59px 22px 40px;
+    border: 1px solid var(--color-accent);
     box-sizing: border-box;
   }
 
@@ -1476,15 +1501,16 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     font-size: 32px;
     font-weight: 500;
     line-height: 48px;
-    letter-spacing: 0.64px;
+    letter-spacing: 0;
     color: var(--color-text-main);
   }
 
   .services-offers .services-lead-mark {
     position: relative;
     display: inline;
-    padding: 2px 4px;
-    background: rgba(255, 193, 0, 0.6);
+    padding: 0 2px;
+    background: var(--color-accent);
+    white-space: nowrap;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
   }
@@ -1711,6 +1737,8 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     display: block;
     width: 163px;
     height: auto;
+    opacity: 1;
+    visibility: visible;
   }
 
   .about-insta--desktop {
@@ -1737,7 +1765,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
 
   .contact-flow {
     width: 256px;
-    margin: 80px 0 0;
+    margin: 0;
   }
 
   .contact-flow-title {
@@ -1758,12 +1786,12 @@ a.cta-pill.services-contact-cta.is-pressed::before {
 
   .contact-flow-list {
     list-style: none;
-    margin: 30px 0 0;
+    margin: 20px 0 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 26px;
+    gap: 20px;
   }
 
   .contact-flow-list li {
@@ -1780,11 +1808,11 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   .contact-flow-list li:not(:last-child)::after {
     content: "";
     position: absolute;
-    left: 24px;
-    top: calc(100% + 5px);
+    left: 0;
+    top: calc(100% + 2px);
     width: 30px;
     height: 15px;
-    background: url("./assets/images/icon-contact-flow-arrow.svg") center / contain no-repeat;
+    background: url("./assets/images/icon-contact-flow-arrow.svg") left center / contain no-repeat;
   }
 
   .section-contact {
@@ -1819,31 +1847,41 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   .contact-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 564px;
+    grid-template-rows: auto auto;
     column-gap: 60px;
-    align-items: start;
+    row-gap: 20px;
+    align-items: stretch;
     width: 100%;
     padding: 0;
     min-height: 0;
   }
 
-  .contact-copy {
-    max-width: 446px;
-    text-align: left;
+  /* Let form + note participate in the grid so copy can match form height only */
+  .contact-form-col {
+    display: contents;
   }
 
-  .contact-form-col {
+  .contact-copy {
+    grid-column: 1;
+    grid-row: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: space-between;
+    max-width: 446px;
+    text-align: left;
+    min-height: 0;
+  }
+
+  .contact-form {
+    grid-column: 2;
+    grid-row: 1;
     width: 564px;
     max-width: 100%;
   }
 
-  .contact-form {
-    width: 100%;
-  }
-
   .contact-note {
+    grid-column: 2;
+    grid-row: 2;
     width: 100%;
     max-width: 563px;
     margin: 0;
@@ -1858,6 +1896,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     max-width: 415px;
     margin: 0;
     font-size: 16px;
+    font-weight: 400;
     line-height: 32px;
     text-align: left;
   }
@@ -1867,10 +1906,10 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .detail-header-inner {
-    width: min(100% - 120px, 1160px);
-    max-width: 1160px;
+    width: min(100% - 80px, var(--container-desktop));
+    max-width: var(--container-desktop);
     margin: 0 auto;
-    padding: 12px 0 0;
+    padding: 100px 0 0;
     justify-content: space-between;
     align-items: flex-start;
   }
@@ -2352,17 +2391,19 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     display: block;
     width: 102px;
     height: 32px;
+    opacity: 1;
   }
 
-  .hero-scroll-arrow--desktop {
+  .hero-scroll-arrow--desktop,
+  .hero-scroll-arrow--hover {
     display: none;
   }
 
-  .hero-scroll-arrow--mobile:nth-of-type(1) {
+  .hero-scroll-arrow--mobile.hero-scroll-arrow--1 {
     top: 0;
   }
 
-  .hero-scroll-arrow--mobile:nth-of-type(2) {
+  .hero-scroll-arrow--mobile.hero-scroll-arrow--2 {
     top: 16px;
   }
 
@@ -2617,7 +2658,11 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .about-more-link img {
+    display: block;
     width: 163px;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
   }
 
   .section-about {
@@ -2735,12 +2780,13 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     color: var(--color-text-main);
   }
 
-  /* intro frame: 370x521, top 495 vs io end 537 → overlap 42px */
+  /* intro frame: 370x521 at x=12. Reduce overlap with profile so cream oval
+     and intro text don't collide with the blue blob / photo. */
   .about-mobile-frame {
     position: relative;
     width: 370px;
     height: 521px;
-    margin: -42px 0 0 2px;
+    margin: 8px 0 0 2px;
     padding: 0;
     box-sizing: border-box;
   }
@@ -2755,10 +2801,10 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     z-index: 0;
   }
 
-  /* body text: left 40 within intro, top 67, 267 wide */
+  /* body text: left 52 within intro (Figma 1698:254), top 67, 267 wide — centered in ellipse */
   .about-mobile-body {
     position: absolute;
-    left: 40px;
+    left: 52px;
     top: 67px;
     z-index: 1;
     width: 267px;
@@ -2888,6 +2934,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     line-height: 32px;
     letter-spacing: 0.48px;
     text-align: left;
+    white-space: nowrap;
   }
 
   .contact-flow {
