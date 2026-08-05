@@ -1,13 +1,13 @@
-/* About detail page */
+/* About detail page (Figma 1683:163 aboutme2) */
 
 .page-about {
-  background: #c9c3b8;
+  background: #c9c4b8;
 }
 
 .about-detail-main {
   width: min(100%, 393px);
   margin: 0 auto;
-  padding: 42px 24px 72px;
+  padding: 42px 24px 80px;
   box-sizing: border-box;
 }
 
@@ -15,14 +15,16 @@
   width: 100%;
   max-width: 345px;
   margin: 0 auto;
-  padding: 39px 35px 48px;
-  border: 1px solid var(--color-bg-soft);
+  padding: 54px 22px 77px;
+  border: 1px solid #f4f2ec;
   backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   box-sizing: border-box;
 }
 
 .about-detail-greeting {
-  margin: 0 0 40px;
+  margin: 0 0 25px;
+  max-width: 300px;
   font-family: var(--font-body);
   font-size: 16px;
   font-weight: 500;
@@ -32,12 +34,12 @@
 }
 
 .about-detail-photo {
-  margin: 0 auto 40px;
+  margin: 0 auto;
   width: 100%;
-  max-width: 250px;
+  max-width: 300px;
 }
 
-.about-detail-photo:last-of-type {
+.about-detail-photo--last {
   margin-bottom: 0;
 }
 
@@ -45,16 +47,36 @@
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 250 / 188;
+  aspect-ratio: 300 / 225;
   object-fit: cover;
 }
 
-.about-detail-body {
-  margin: 0 0 40px;
+.about-detail-maru {
+  display: flex;
   width: 100%;
-  max-width: 275px;
-  margin-inline: auto;
-  margin-bottom: 40px;
+  max-width: 300px;
+  margin: 21px auto;
+  line-height: 0;
+}
+
+.about-detail-maru--left {
+  justify-content: flex-start;
+}
+
+.about-detail-maru--right {
+  justify-content: flex-end;
+}
+
+.about-detail-maru img {
+  display: block;
+  width: 81px;
+  height: 15px;
+}
+
+.about-detail-body {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
   font-family: var(--font-zen);
   font-size: 16px;
   font-weight: 400;
@@ -64,63 +86,29 @@
 }
 
 .about-detail-body p {
-  margin: 0 0 1em;
+  margin: 0;
 }
 
-.about-detail-body p:last-child {
-  margin-bottom: 0;
-}
-
-.about-detail-body strong {
-  font-weight: 700;
-}
-
-.about-detail-quote {
-  margin-bottom: 1em;
-}
-
-.about-detail-quote-indent {
-  display: inline-block;
-  padding-left: 3em;
+.about-detail-body p.about-detail-gap {
+  margin-top: 32px;
 }
 
 .about-detail-cta {
-  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 72px 0 0;
-  min-height: 109px;
+  margin-top: 70px;
 }
 
-.about-detail-cta a.cta-pill.hero-works-cta {
-  position: relative;
-  left: auto;
-  right: auto;
-  bottom: auto;
-  transform: none;
-  margin: 0;
-  width: 199px;
-  height: 109px;
-  background: rgba(206, 200, 194, 0.2);
-  box-shadow: 0 10px 10px rgba(123, 138, 138, 0.15);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  overflow: hidden;
+.about-detail-cta .services-contact-cta {
+  width: 300px;
+  height: 80px;
 }
 
-.about-detail-cta a.cta-pill.hero-works-cta::before {
-  opacity: 1;
-  background: rgba(255, 193, 0, 0.6);
-}
-
-.about-detail-cta a.cta-pill.hero-works-cta.is-pressed::before {
-  background: rgba(255, 193, 0, 1);
-}
-
-.about-detail-cta .cta-pill-arrow-track {
-  opacity: 1;
+.about-detail-cta .services-contact-cta .cta-pill-label {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1.4px;
 }
 
 @media (min-width: 901px) {
@@ -131,18 +119,43 @@
 
   .about-detail-card {
     max-width: 560px;
-    padding: 56px 48px;
+    padding: 56px 48px 64px;
   }
 
-  .about-detail-photo {
-    max-width: 360px;
-  }
-
-  .about-detail-body {
+  .about-detail-photo,
+  .about-detail-body,
+  .about-detail-greeting,
+  .about-detail-maru {
     max-width: 420px;
   }
 
   .about-detail-cta {
     margin-top: 80px;
+  }
+
+  /* subjects2: match body text, yellow on hover (same as LP) */
+  .page-about .detail-header .nav,
+  .page-about .detail-header .nav a {
+    color: var(--color-text-main);
+  }
+
+  .page-about .detail-header .nav a:hover,
+  .page-about .detail-header .nav a:focus-visible {
+    color: var(--color-accent);
+  }
+
+  /* CTA: yellow 50% in default state */
+  .page-about .about-detail-cta .services-contact-cta {
+    background: rgba(206, 200, 194, 0.2);
+    box-shadow: 0 10px 10px rgba(123, 138, 138, 0.15);
+  }
+
+  .page-about .about-detail-cta .services-contact-cta::before {
+    opacity: 1 !important;
+    background: rgba(255, 193, 0, 0.5) !important;
+  }
+
+  .page-about .about-detail-cta .services-contact-cta .cta-pill-label {
+    color: var(--color-text-main);
   }
 }

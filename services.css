@@ -1,7 +1,9 @@
-/* Services detail page (mobile-first; desktop mirrors mobile layout) */
-
 .page-services {
   background: var(--color-bg-soft);
+}
+
+.pricing-estimate-desktop {
+  display: none;
 }
 
 .services-detail-main {
@@ -144,33 +146,25 @@
   color: var(--color-text-main);
 }
 
-/* tools: after process (Figma gap ~84px) */
-.tools-box {
+/* tools: after process (Figma 1749:322 — plain text, no border) */
+.tools-line {
   width: 100%;
   max-width: 345px;
-  height: 109px;
-  margin: 84px auto 0;
-  padding: 18px 19px;
-  border: 1px solid var(--color-bg-footer);
-  box-sizing: border-box;
+  margin: 36px auto 0;
   font-family: var(--font-body);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 35px;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.48px;
   color: var(--color-text-main);
 }
 
-.tools-box p {
-  margin: 0;
-}
-
-.tools-box-en {
+.tools-line-en {
   font-family: var(--font-heading);
 }
 
-/* pricing after tools (Figma gap ~84px) */
-.tools-box + .services-detail-block--pricing {
+/* pricing after tools */
+.tools-line + .services-detail-block--pricing {
   margin-top: 84px;
 }
 
@@ -256,21 +250,147 @@
 }
 
 @media (min-width: 901px) {
-  .services-detail-main {
-    width: min(100% - 80px, 720px);
-    padding: 80px 40px 120px;
+  .pricing-estimate-mobile {
+    display: none;
   }
 
-  .process-list,
-  .services-side-title,
-  .pricing-estimate,
-  .pricing-copy,
-  .pricing-note,
-  .tools-box {
-    max-width: 520px;
+  .pricing-estimate-desktop {
+    display: inline;
+  }
+
+  .services-detail-main {
+    width: min(100% - 120px, 1280px);
+    max-width: 1280px;
+    padding: 112px 60px 120px;
+  }
+
+  .services-detail-title {
+    margin-bottom: 80px;
+  }
+
+  .services-detail-title .section-title {
+    font-size: 72px;
+  }
+
+  .services-detail-title .section-heading-line {
+    width: 400px;
+    margin-top: 14px;
+  }
+
+  .services-detail-title .section-subtitle {
+    margin-top: 6px;
+    font-size: 24px;
+    letter-spacing: 0.72px;
+  }
+
+  .services-side-title {
+    max-width: none;
+    margin: 0 0 64px;
+  }
+
+  .services-side-title h2 {
+    font-size: 36px;
+  }
+
+  .process-list {
+    max-width: 1159px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 345px);
+    justify-content: center;
+    column-gap: 62px;
+    row-gap: 65px;
+    position: relative;
+    margin: 0 auto;
+    overflow: visible;
+  }
+
+  .process-card {
+    position: relative;
+    width: 345px;
+    overflow: visible;
   }
 
   .process-card-body {
-    grid-template-columns: 90px 1fr;
+    grid-template-columns: 90px minmax(0, 206px);
+  }
+
+  /* arrows sit in the 62px gutters — no overlap with cards */
+  .process-card:nth-child(1)::after,
+  .process-card:nth-child(2)::after,
+  .process-card:nth-child(4)::after,
+  .process-card:nth-child(5)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -41px;
+    width: 20px;
+    height: 40px;
+    transform: translateY(-50%);
+    background: url("./assets/images/process-flow-arrow.svg") center / contain no-repeat;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .tools-line {
+    max-width: none;
+    width: auto;
+    margin: 33px 0 0;
+    font-size: 20px;
+    letter-spacing: 0.6px;
+  }
+
+  .tools-line + .services-detail-block--pricing {
+    margin-top: 80px;
+  }
+
+  .services-detail-block--pricing {
+    display: grid;
+    grid-template-columns: 430px 1fr;
+    grid-template-areas:
+      "title title"
+      "estimate prices"
+      "estimate note";
+    column-gap: 50px;
+    row-gap: 0;
+    align-items: start;
+  }
+
+  .services-detail-block--pricing > .services-side-title {
+    grid-area: title;
+    margin-bottom: 63px;
+  }
+
+  .pricing-estimate {
+    grid-area: estimate;
+    max-width: 430px;
+    width: 430px;
+    height: 147px;
+    margin: 0;
+    padding: 34px 30px;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 0.72px;
+  }
+
+  .pricing-copy {
+    grid-area: prices;
+    max-width: 680px;
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 0.6px;
+  }
+
+  .pricing-note {
+    grid-area: note;
+    max-width: 680px;
+    margin: 0;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.6px;
+  }
+
+  .services-detail-cta {
+    margin-top: 120px;
   }
 }
