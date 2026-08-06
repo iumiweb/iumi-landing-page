@@ -277,6 +277,10 @@ a {
   margin: 0;
 }
 
+.hero-copy-main {
+  font-weight: 350;
+}
+
 .hero-copy-sub {
   font-family: var(--font-zen);
 }
@@ -1302,7 +1306,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     display: block;
     margin: 0;
     font-size: 64px;
-    font-weight: 400;
+    font-weight: 350;
     line-height: normal;
   }
 
@@ -2282,7 +2286,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     margin: 0;
     font-family: var(--font-body);
     font-size: 64px;
-    font-weight: 300;
+    font-weight: 350;
     line-height: 84px;
     letter-spacing: 0;
   }
