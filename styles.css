@@ -851,7 +851,7 @@ a.cta-pill.hero-works-cta {
     transform: rotate(-3.55deg) translate(0, 0);
   }
   50% {
-    transform: rotate(-3.55deg) translate(8px, -12px);
+    transform: rotate(-3.55deg) translate(6px, -10px);
   }
 }
 
@@ -1301,21 +1301,17 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   .hero-copy-main {
     display: block;
     margin: 0;
-    font-family: var(--font-body);
     font-size: 64px;
     font-weight: 400;
     line-height: normal;
-    color: var(--color-text-main);
   }
 
   .hero-copy-sub {
     display: block;
     margin: 31px 0 0;
-    font-family: var(--font-zen);
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
-    color: var(--color-text-main);
   }
 
   .hero-copy .hero-caption {
@@ -1433,24 +1429,23 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .work-item--desktop .work-item-thumb {
+    position: relative;
     width: 345px;
     height: 201px;
     border: 1px solid var(--color-bg-footer);
-    border-bottom: 0;
+    border-bottom: none;
     overflow: hidden;
     box-sizing: border-box;
   }
 
   .work-item--desktop .work-item-thumb img {
-    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  /* Match Figma bunners crop (same as mobile) */
   .work-item--desktop[href="./banners.html"] .work-item-thumb img {
-    position: relative;
+    position: absolute;
     width: 127.13%;
     height: 177.74%;
     max-width: none;
@@ -1511,17 +1506,15 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     width: 345px;
     min-height: 360px;
     margin: 0;
-    padding: 59px 24px 40px;
+    padding: 48px 24px 40px;
     border: 1px solid var(--color-accent);
     box-sizing: border-box;
   }
 
-  .services-offers .services-lead-box p,
-  .services-offers .services-lead-desktop {
+  .services-offers .services-lead-box p {
     position: relative;
     z-index: 1;
     margin: 0;
-    font-family: var(--font-body);
     font-size: 28px;
     font-weight: 400;
     line-height: 48px;
@@ -1660,7 +1653,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 1;
+    z-index: 2;
     width: 203px;
     height: 284px;
     object-fit: cover;
@@ -1675,7 +1668,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     height: 200px;
     transform: rotate(-3.55deg);
     pointer-events: none;
-    animation: about-blob-float 5.5s ease-in-out infinite;
+    animation: about-blob-float 6.5s ease-in-out infinite;
   }
 
   .about-desktop-identity {
@@ -1683,7 +1676,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     left: 203px;
     top: 54px;
     width: 211px;
-    z-index: 1;
+    z-index: 3;
   }
 
   .about-desktop-name {
@@ -2469,10 +2462,11 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .work-item-thumb {
+    position: relative;
     width: 100%;
     height: 201px;
     border: 1px solid var(--color-bg-footer);
-    border-bottom: 0;
+    border-bottom: none;
     box-sizing: border-box;
     overflow: hidden;
   }
@@ -2485,14 +2479,14 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .work-item[href="./banners.html"] .work-item-thumb img {
-    position: relative;
+    position: absolute;
     width: 127.13%;
     height: 177.74%;
     max-width: none;
     left: -13.42%;
     top: -8.56%;
     object-fit: cover;
-    object-position: center;
+    transform: none;
   }
 
   .work-item-caption {
@@ -2547,8 +2541,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     box-sizing: border-box;
   }
 
-  .services-lead-box p,
-  .services-lead-mobile {
+  .services-lead-box p {
     position: relative;
     z-index: 1;
     margin: 0;
@@ -2782,7 +2775,8 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     transform: rotate(-3.55deg);
     transform-origin: center center;
     z-index: 0;
-    animation: about-blob-float 5.5s ease-in-out infinite;
+    pointer-events: none;
+    animation: about-blob-float 6.5s ease-in-out infinite;
   }
 
   /* image2-2: left 206, top 66, 168x234 */
@@ -2853,7 +2847,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     margin: 0;
   }
 
-  /* next: left 103, top 437 within intro (+10px from prior) */
+  /* next: left 103, top 437 within intro (+10px) */
   .about-mobile-frame .about-more-link {
     position: absolute;
     left: 103px;
@@ -2960,7 +2954,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
 
   .contact-lead {
     width: fit-content;
-    max-width: calc(100% - 48px);
+    max-width: 100%;
     margin: 50px auto 0;
     font-size: 16px;
     font-weight: 400;
@@ -3027,8 +3021,8 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .contact-note {
-    width: fit-content;
-    max-width: calc(100% - 48px);
+    width: 100%;
+    max-width: 281px;
     margin: 95px auto 0;
     font-size: 12px;
     font-weight: 400;
