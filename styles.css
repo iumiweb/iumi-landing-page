@@ -845,6 +845,16 @@ a.cta-pill.hero-works-cta {
   }
 }
 
+@keyframes about-blob-float {
+  0%,
+  100% {
+    transform: rotate(-3.55deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(-3.55deg) translate(8px, -12px);
+  }
+}
+
 .services-contact-cta {
   position: relative;
   z-index: 1;
@@ -1277,45 +1287,44 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .hero-copy {
-    left: 62px;
-    top: 230px;
+    left: 60px;
+    top: 182px;
     width: auto;
-    max-width: 347px;
+    max-width: 646px;
     transform: none;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 32px;
-    --hero-copy-line-gap: 32px;
-  }
-
-  .hero-copy-main,
-  .hero-copy-main--line2,
-  .hero-copy-sub,
-  .hero-copy-sub--line2 {
-    display: inline;
-    margin: 0;
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 64px;
+    font-weight: 400;
     line-height: normal;
+    --hero-copy-line-gap: 30px;
   }
 
-  .hero-copy-main--line2::after {
-    content: "\A";
-    white-space: pre;
+  .hero-copy-main {
+    display: block;
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 64px;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--color-text-main);
   }
 
-  .hero-copy-sub--line2::after {
-    content: "\A";
-    white-space: pre;
+  .hero-copy-sub {
+    display: block;
+    margin: 31px 0 0;
+    font-family: var(--font-zen);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--color-text-main);
   }
 
   .hero-copy .hero-caption {
     display: block;
-    margin-top: calc(var(--hero-copy-line-gap) * 1.5);
+    margin-top: 0;
     font-family: var(--font-zen);
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
   }
 
   .hero-works-cta,
@@ -1427,20 +1436,33 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     width: 345px;
     height: 201px;
     border: 1px solid var(--color-bg-footer);
+    border-bottom: 0;
     overflow: hidden;
     box-sizing: border-box;
   }
 
   .work-item--desktop .work-item-thumb img {
+    display: block;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+  }
+
+  /* Match Figma bunners crop (same as mobile) */
+  .work-item--desktop[href="./banners.html"] .work-item-thumb img {
+    position: relative;
+    width: 127.13%;
+    height: 177.74%;
+    max-width: none;
+    left: -13.42%;
+    top: -8.56%;
     object-fit: cover;
   }
 
   .work-item--desktop .work-item-caption {
     width: 345px;
     min-height: 70px;
-    margin-top: -3px;
+    margin-top: 0;
     padding: 12px 16px;
     border: 1px solid var(--color-bg-footer);
     box-sizing: border-box;
@@ -1489,19 +1511,21 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     width: 345px;
     min-height: 360px;
     margin: 0;
-    padding: 59px 22px 40px;
+    padding: 59px 24px 40px;
     border: 1px solid var(--color-accent);
     box-sizing: border-box;
   }
 
-  .services-offers .services-lead-box p {
+  .services-offers .services-lead-box p,
+  .services-offers .services-lead-desktop {
     position: relative;
     z-index: 1;
     margin: 0;
-    font-size: 32px;
-    font-weight: 500;
+    font-family: var(--font-body);
+    font-size: 28px;
+    font-weight: 400;
     line-height: 48px;
-    letter-spacing: 0;
+    letter-spacing: 0.56px;
     color: var(--color-text-main);
   }
 
@@ -1509,7 +1533,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     position: relative;
     display: inline;
     padding: 0 2px;
-    background: var(--color-accent);
+    background: rgba(255, 193, 0, 0.6);
     white-space: nowrap;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
@@ -1636,6 +1660,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 1;
     width: 203px;
     height: 284px;
     object-fit: cover;
@@ -1645,10 +1670,12 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     position: absolute;
     left: 155px;
     top: 32px;
+    z-index: 0;
     width: 283px;
     height: 200px;
     transform: rotate(-3.55deg);
     pointer-events: none;
+    animation: about-blob-float 5.5s ease-in-out infinite;
   }
 
   .about-desktop-identity {
@@ -2445,6 +2472,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     width: 100%;
     height: 201px;
     border: 1px solid var(--color-bg-footer);
+    border-bottom: 0;
     box-sizing: border-box;
     overflow: hidden;
   }
@@ -2457,12 +2485,14 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .work-item[href="./banners.html"] .work-item-thumb img {
+    position: relative;
     width: 127.13%;
     height: 177.74%;
     max-width: none;
+    left: -13.42%;
+    top: -8.56%;
     object-fit: cover;
     object-position: center;
-    transform: translate(-10.55%, -4.8%);
   }
 
   .work-item-caption {
@@ -2470,7 +2500,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     align-items: center;
     width: 100%;
     min-height: 70px;
-    margin-top: -1px;
+    margin-top: 0;
     padding: 12px 16px;
     border: 1px solid var(--color-bg-footer);
     box-sizing: border-box;
@@ -2517,7 +2547,8 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     box-sizing: border-box;
   }
 
-  .services-lead-box p {
+  .services-lead-box p,
+  .services-lead-mobile {
     position: relative;
     z-index: 1;
     margin: 0;
@@ -2751,6 +2782,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     transform: rotate(-3.55deg);
     transform-origin: center center;
     z-index: 0;
+    animation: about-blob-float 5.5s ease-in-out infinite;
   }
 
   /* image2-2: left 206, top 66, 168x234 */
@@ -2821,11 +2853,11 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     margin: 0;
   }
 
-  /* next: left 103, top 427 within intro */
+  /* next: left 103, top 437 within intro (+10px from prior) */
   .about-mobile-frame .about-more-link {
     position: absolute;
     left: 103px;
-    top: 427px;
+    top: 437px;
     bottom: auto;
     z-index: 2;
     width: 163px;
@@ -2927,8 +2959,9 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .contact-lead {
+    width: fit-content;
+    max-width: calc(100% - 48px);
     margin: 50px auto 0;
-    max-width: 345px;
     font-size: 16px;
     font-weight: 400;
     line-height: 32px;
@@ -2994,10 +3027,10 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .contact-note {
-    width: 100%;
-    max-width: 281px;
+    width: fit-content;
+    max-width: calc(100% - 48px);
     margin: 95px auto 0;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 18px;
     letter-spacing: 0.48px;
@@ -3184,6 +3217,12 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   .services-cta-ellipse {
     animation: none;
     transform: rotate(90deg) scaleY(1.5);
+  }
+
+  .about-desktop-blob,
+  .about-mobile-blob {
+    animation: none;
+    transform: rotate(-3.55deg);
   }
 
   .work-card-overlay,
