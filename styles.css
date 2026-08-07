@@ -1506,34 +1506,47 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .services-offers .services-lead-box {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     width: 345px;
-    min-height: 360px;
+    height: 345px;
+    min-height: 345px;
     margin: 0;
-    padding: 48px 24px 40px;
-    border: 1px solid var(--color-accent);
+    padding: 4px 22px 0;
+    border: 20px solid var(--color-accent);
     box-sizing: border-box;
   }
 
-  .services-offers .services-lead-box p {
+  .services-offers .services-lead-box p,
+  .services-offers .services-lead-desktop {
     position: relative;
     z-index: 1;
+    width: 261px;
     margin: 0;
-    font-size: 28px;
+    font-family: var(--font-body);
     font-weight: 400;
-    line-height: 48px;
     letter-spacing: 0.56px;
     color: var(--color-text-main);
+    text-align: left;
+  }
+
+  .services-offers .services-lead-sm {
+    font-size: 20px;
+    line-height: 60px;
+  }
+
+  .services-offers .services-lead-lg {
+    font-size: 36px;
+    line-height: 52px;
+  }
+
+  .services-offers .services-lead-desktop .services-lead-sm:last-child {
+    line-height: 48px;
   }
 
   .services-offers .services-lead-mark {
-    position: relative;
-    display: inline;
-    padding: 0 2px;
-    background: rgba(255, 193, 0, 0.6);
-    white-space: nowrap;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
+    display: none;
   }
 
   .services-offers .services-lead-mark::before {
@@ -1542,7 +1555,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
 
   .services-offers .services-offer {
     width: 345px;
-    min-height: 360px;
+    min-height: 345px;
     padding: 0 0 24px;
     border: 1px solid var(--color-accent);
     box-sizing: border-box;
@@ -2383,7 +2396,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   .hero-scroll-cta {
     position: absolute;
     left: 50%;
-    bottom: 74px;
+    bottom: 94px;
     z-index: 5;
     display: flex !important;
     flex-direction: column;
@@ -2542,31 +2555,47 @@ a.cta-pill.services-contact-cta.is-pressed::before {
 
   .services-lead-box {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     width: 100%;
-    min-height: 193px;
-    padding: 35px 35px 40px;
-    border: 1px solid var(--color-accent);
+    height: 270px;
+    min-height: 270px;
+    padding: 4px 16px 0;
+    border: 16px solid var(--color-accent);
     box-sizing: border-box;
+    overflow: hidden;
   }
 
-  .services-lead-box p {
+  .services-lead-box p,
+  .services-lead-mobile {
     position: relative;
     z-index: 1;
+    width: 176px;
     margin: 0;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 32px;
-    letter-spacing: 0.48px;
+    font-family: var(--font-body);
+    font-weight: 400;
+    letter-spacing: 0.32px;
     color: var(--color-text-main);
+    text-align: left;
+  }
+
+  .services-lead-mobile .services-lead-sm {
+    font-size: 16px;
+    line-height: 48px;
+  }
+
+  .services-lead-mobile .services-lead-lg {
+    font-size: 24px;
+    line-height: 40px;
+  }
+
+  .services-lead-mobile .services-lead-sm:last-child {
+    line-height: 40px;
   }
 
   .services-lead-mark {
-    position: relative;
-    display: inline;
-    padding: 2px 4px;
-    background: rgba(255, 193, 0, 0.6);
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
+    display: none;
   }
 
   .services-lead-mark::before {
