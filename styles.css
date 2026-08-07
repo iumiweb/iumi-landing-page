@@ -852,10 +852,10 @@ a.cta-pill.hero-works-cta {
 @keyframes about-blob-float {
   0%,
   100% {
-    transform: rotate(-3.55deg) translate(0, 0);
+    transform: translate(0, 0);
   }
   50% {
-    transform: rotate(-3.55deg) translate(6px, -10px);
+    transform: translate(6px, -10px);
   }
 }
 
@@ -1675,18 +1675,19 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     padding-bottom: 40px;
   }
 
+  /* io: Figma 1943:446 — left ~89 within 1100 (from 189 in 1280) */
   .about-desktop-profile {
     position: absolute;
-    left: 78px;
-    top: 67px;
-    width: 438px;
-    height: 284px;
+    left: 89px;
+    top: 12px;
+    width: 441px;
+    height: 307px;
   }
 
   .about-desktop-portrait {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 23px;
     z-index: 2;
     width: 203px;
     height: 284px;
@@ -1695,20 +1696,20 @@ a.cta-pill.services-contact-cta.is-pressed::before {
 
   .about-desktop-blob {
     position: absolute;
-    left: 155px;
-    top: 32px;
+    left: 118px;
+    top: 0;
     z-index: 0;
-    width: 283px;
-    height: 200px;
-    transform: rotate(-3.55deg);
+    width: 322.84px;
+    height: 273.74px;
+    max-width: none;
     pointer-events: none;
     animation: about-blob-float 6.5s ease-in-out infinite;
   }
 
   .about-desktop-identity {
     position: absolute;
-    left: 203px;
-    top: 54px;
+    left: 189px;
+    top: 77px;
     width: 211px;
     z-index: 3;
   }
@@ -1723,20 +1724,20 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .about-desktop-meta {
-    margin: 22px 0 0;
+    margin: 21px 0 0;
     font-family: var(--font-body);
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 30px;
     letter-spacing: 0.48px;
     color: var(--color-text-main);
   }
 
-  /* ~20px visual gap between light-blue blob and cream frame */
+  /* intro: 603-189=414 from profile left → 89+414=503 */
   .about-desktop-intro {
     position: absolute;
-    left: 580px;
-    top: 30px;
+    left: 503px;
+    top: 0;
     width: 509px;
     height: 445px;
     min-height: 445px;
@@ -1802,10 +1803,11 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     visibility: visible;
   }
 
+  /* insta within io: left ~106, top 326 → absolute 89+106 / 12+326 */
   .about-insta--desktop {
     position: absolute;
-    left: 168px;
-    top: 368px;
+    left: 195px;
+    top: 338px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2795,34 +2797,33 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     overflow: visible;
   }
 
-  /* Figma about (1698:253): content origin x=10 within 393 */
+  /* Figma about (1698:253 / 1943:453) */
   .about-mobile {
     position: relative;
-    width: 374px;
-    max-width: calc(100% + 29px);
-    margin: 0 0 0 -14px;
+    width: 100%;
+    max-width: 393px;
+    margin: 0 auto;
   }
 
-  /* io frame: 374x300 */
   .about-mobile-profile {
     position: relative;
-    width: 374px;
-    height: 300px;
-    margin: 0;
+    width: 384px;
+    height: 332px;
+    margin: 0 0 0 -1px;
   }
 
   .about-mobile-name {
     position: absolute;
-    left: 79px;
-    top: 0;
+    left: 150px;
+    top: 73px;
     z-index: 3;
-    width: 211px;
+    width: 175px;
     margin: 0;
     font-family: var(--font-heading);
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 400;
     line-height: 36px;
-    text-align: center;
+    text-align: left;
     color: var(--color-text-main);
   }
 
@@ -2831,29 +2832,23 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     background: #f4f2ec;
   }
 
-  /*
-    Ellipse 5 wrapper in Figma: 283x200 at (0,46),
-    inner SVG 272.287x183.013 centered, then rotate -3.55deg
-  */
   .about-mobile-blob {
     position: absolute;
-    left: 5.4px;
-    top: 54.5px;
-    width: 272.287px;
-    height: 183.013px;
+    left: 61px;
+    top: 0;
+    width: 322.84px;
+    height: 273.74px;
+    max-width: none;
     object-fit: fill;
-    transform: rotate(-3.55deg);
-    transform-origin: center center;
     z-index: 0;
     pointer-events: none;
     animation: about-blob-float 6.5s ease-in-out infinite;
   }
 
-  /* image2-2: left 206, top 66, 168x234 */
   .about-mobile-portrait {
     position: absolute;
-    left: 206px;
-    top: 66px;
+    left: 0;
+    top: 98px;
     width: 168px;
     height: 234px;
     object-fit: cover;
@@ -2861,27 +2856,26 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     z-index: 1;
   }
 
-  /* meta: left 61, top 103 */
   .about-mobile-meta {
     position: absolute;
-    left: 61px;
-    top: 103px;
+    left: 150px;
+    top: 123px;
     z-index: 2;
     margin: 0;
     width: 158px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 30px;
     letter-spacing: 0.48px;
     color: var(--color-text-main);
   }
 
-  /* intro frame: 370x497 (Figma 1850:1084) */
+  /* intro overlaps profile by ~42px (Figma top 495 vs io end 537) */
   .about-mobile-frame {
     position: relative;
     width: 370px;
     height: 497px;
-    margin: 8px 0 0 11px;
+    margin: -42px 0 0 13px;
     padding: 0;
     box-sizing: border-box;
     overflow: visible;
@@ -2935,13 +2929,13 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     line-height: 30px;
   }
 
-  /* insta: gap after intro ~28px */
+  /* insta: ~39px after intro */
   .about-insta {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 184px;
-    margin: 28px 0 0 95px;
+    margin: 39px auto 0;
     gap: 8px;
   }
 

@@ -166,26 +166,40 @@
   z-index: 2;
 }
 
-/* tools: after process (Figma — plain text, no border) */
+/* tools: after process (Figma — 制作環境 + tools + languages) */
 .tools-line {
   width: 100%;
   max-width: 345px;
-  margin: 36px auto 0;
+  margin: 22px auto 0;
   font-family: var(--font-body);
-  font-size: 16px;
   font-weight: 400;
-  line-height: 35px;
   letter-spacing: 0.48px;
   color: var(--color-text-main);
 }
 
-.tools-line-en {
-  font-family: var(--font-heading);
+.tools-line p {
+  margin: 0;
 }
 
-/* pricing after tools */
+.tools-line-label {
+  font-size: 16px;
+  line-height: 35px;
+}
+
+.tools-line-en {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.tools-line-lang {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+/* pricing after tools — Figma gap ~85px after taller tools block */
 .tools-line + .services-detail-block--pricing {
-  margin-top: 84px;
+  margin-top: 85px;
 }
 
 .services-detail-block--pricing > .services-side-title {
@@ -334,6 +348,11 @@
     overflow: visible;
   }
 
+  /* row 2 (cards 4–6 + arrows) shifted ~30px right — Figma left 29/420/814 vs 0/392/785 */
+  .process-card:nth-child(n + 4) {
+    transform: translateX(29px);
+  }
+
   .process-card-body {
     grid-template-columns: 90px minmax(0, 206px);
   }
@@ -362,13 +381,27 @@
   .tools-line {
     max-width: none;
     width: auto;
-    margin: 33px 0 0;
-    font-size: 20px;
+    margin: 44px 0 0;
     letter-spacing: 0.6px;
   }
 
+  .tools-line-label {
+    font-size: 20px;
+    line-height: 35px;
+  }
+
+  .tools-line-en {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .tools-line-lang {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
   .tools-line + .services-detail-block--pricing {
-    margin-top: 80px;
+    margin-top: 85px;
   }
 
   .services-detail-block--pricing {
