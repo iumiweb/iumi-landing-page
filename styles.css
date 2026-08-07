@@ -1636,6 +1636,10 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     background: var(--color-bg-about);
   }
 
+  .section-heading-line--about {
+    background: #f4f2ec;
+  }
+
   .about-desktop {
     position: relative;
     width: 100%;
