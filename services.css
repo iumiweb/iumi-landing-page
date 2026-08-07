@@ -169,7 +169,7 @@
 /* tools: after process (Figma — 制作環境 + tools + languages) */
 .tools-line {
   width: 100%;
-  max-width: 345px;
+  max-width: 360px;
   margin: 22px auto 0;
   font-family: var(--font-body);
   font-weight: 400;
@@ -195,6 +195,7 @@
 .tools-line-lang {
   font-size: 16px;
   line-height: 30px;
+  white-space: nowrap;
 }
 
 /* pricing after tools — Figma gap ~85px after taller tools block */

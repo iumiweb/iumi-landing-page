@@ -2793,15 +2793,15 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .section-about .container {
-    padding-inline: 24px;
+    padding-inline: 0;
     overflow: visible;
   }
 
-  /* Figma about (1698:253 / 1943:453) */
+  /* Figma about (1698:253): 393-wide composition, centered in viewport */
   .about-mobile {
     position: relative;
-    width: 100%;
-    max-width: 393px;
+    width: 393px;
+    max-width: 100%;
     margin: 0 auto;
   }
 
@@ -2870,12 +2870,12 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     color: var(--color-text-main);
   }
 
-  /* intro overlaps profile by ~42px (Figma top 495 vs io end 537) */
+  /* intro: Figma left 12 within 393 frame */
   .about-mobile-frame {
     position: relative;
     width: 370px;
     height: 497px;
-    margin: -42px 0 0 13px;
+    margin: -42px 0 0 12px;
     padding: 0;
     box-sizing: border-box;
     overflow: visible;
@@ -2929,7 +2929,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     line-height: 30px;
   }
 
-  /* insta: ~39px after intro */
+  /* insta: ~39px after intro, centered */
   .about-insta {
     display: flex;
     flex-direction: column;
