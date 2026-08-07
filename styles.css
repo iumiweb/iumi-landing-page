@@ -1554,23 +1554,29 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .services-offers .services-offer {
+    position: relative;
     width: 345px;
+    height: 345px;
     min-height: 345px;
-    padding: 0 0 24px;
-    border: 1px solid var(--color-accent);
+    padding: 0;
+    border: 2px solid var(--color-bg-hero-top);
     box-sizing: border-box;
   }
 
   .services-offers .services-offer-head {
+    position: absolute;
+    left: 24px;
+    top: 22px;
     display: grid;
     place-items: center;
-    width: 100%;
-    height: 109px;
-    background: rgba(169, 202, 248, 0.4);
+    width: 297px;
+    height: 82px;
+    background: rgba(255, 193, 0, 0.6);
   }
 
   .services-offers .services-offer-title {
     margin: 0;
+    font-family: var(--font-body);
     font-size: 24px;
     font-weight: 400;
     line-height: 30px;
@@ -1584,10 +1590,13 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .services-offers .services-offer-icons {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 116px;
     width: 197px;
     height: 128px;
-    margin: 16px auto 0;
+    margin: 0;
+    transform: translateX(-50%);
   }
 
   .services-offers .services-offer-icon {
@@ -1610,11 +1619,15 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .services-offers .services-offer-text {
+    position: absolute;
+    left: 50%;
+    top: 256px;
     width: 288px;
-    margin: 18px auto 0;
+    margin: 0;
+    transform: translateX(-50%);
     font-size: 16px;
     font-weight: 400;
-    line-height: 40px;
+    line-height: 32px;
     letter-spacing: 0.48px;
     color: var(--color-text-main);
   }
@@ -1725,23 +1738,28 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     left: 580px;
     top: 30px;
     width: 509px;
+    height: 445px;
     min-height: 445px;
   }
 
   .about-desktop-frame {
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
+    left: -3px;
+    top: -7px;
+    width: 523.5px;
+    height: 457.3px;
+    max-width: none;
     object-fit: fill;
     pointer-events: none;
   }
 
   .about-desktop-body {
-    position: relative;
+    position: absolute;
+    left: 85px;
+    top: 110px;
     z-index: 1;
     width: 365px;
-    margin: 72px auto 0;
+    margin: 0;
     font-family: var(--font-zen);
     font-size: 16px;
     font-weight: 400;
@@ -1755,14 +1773,16 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .about-desktop-intro .about-more-link {
-    position: relative;
+    position: absolute;
+    left: 185px;
+    top: 369px;
     z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
-    width: fit-content;
-    margin: 24px auto 0;
+    width: 163px;
+    margin: 0;
     color: var(--color-text-main);
     text-decoration: none;
   }
@@ -2613,15 +2633,16 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     border: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 16px;
   }
 
   .services-offer {
     position: relative;
     width: 100%;
-    min-height: 360px;
-    padding: 0 0 24px;
-    border: 1px solid var(--color-accent);
+    height: 345px;
+    min-height: 345px;
+    padding: 0;
+    border: 2px solid var(--color-bg-hero-top);
     box-sizing: border-box;
   }
 
@@ -2630,15 +2651,19 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .services-offer-head {
+    position: absolute;
+    left: 24px;
+    top: 22px;
     display: grid;
     place-items: center;
-    width: 100%;
-    height: 109px;
-    background: rgba(169, 202, 248, 0.4);
+    width: 297px;
+    height: 82px;
+    background: rgba(255, 193, 0, 0.6);
   }
 
   .services-offer-title {
     margin: 0;
+    font-family: var(--font-body);
     font-size: 24px;
     font-weight: 400;
     line-height: 30px;
@@ -2648,13 +2673,17 @@ a.cta-pill.services-contact-cta.is-pressed::before {
 
   .services-offer-title span {
     font-family: var(--font-heading);
+    font-weight: 400;
   }
 
   .services-offer-icons {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 116px;
     width: 197px;
     height: 128px;
-    margin: 16px auto 0;
+    margin: 0;
+    transform: translateX(-50%);
   }
 
   .services-offer-icon {
@@ -2670,19 +2699,23 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .services-offer-icon--web {
-    right: 0;
+    left: 107px;
     top: 28px;
     width: 90px;
     height: 90px;
   }
 
   .services-offer-text {
+    position: absolute;
+    left: 50%;
+    top: 256px;
     width: 288px;
     max-width: calc(100% - 40px);
-    margin: 18px auto 0;
+    margin: 0;
+    transform: translateX(-50%);
     font-size: 16px;
     font-weight: 400;
-    line-height: 40px;
+    line-height: 32px;
     letter-spacing: 0.48px;
     color: var(--color-text-main);
     text-align: left;
@@ -2843,32 +2876,33 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     color: var(--color-text-main);
   }
 
-  /* intro frame: 370x521 at x=12. Reduce overlap with profile so cream oval
-     and intro text don't collide with the blue blob / photo. */
+  /* intro frame: 370x497 (Figma 1850:1084) */
   .about-mobile-frame {
     position: relative;
     width: 370px;
-    height: 521px;
-    margin: 8px 0 0 2px;
+    height: 497px;
+    margin: 8px 0 0 11px;
     padding: 0;
     box-sizing: border-box;
+    overflow: visible;
   }
 
   .about-mobile-frame-ellipse {
     position: absolute;
     left: 0;
-    top: 0;
+    top: -34px;
     width: 370px;
-    height: 521px;
+    height: 525px;
+    max-width: none;
     pointer-events: none;
     z-index: 0;
   }
 
-  /* body text: left 52 within intro (Figma 1698:254), top 67, 267 wide — centered in ellipse */
+  /* body text: left 51, top 78, 267 wide (Figma 1698:254) */
   .about-mobile-body {
     position: absolute;
-    left: 52px;
-    top: 67px;
+    left: 51px;
+    top: 78px;
     z-index: 1;
     width: 267px;
     margin: 0;
@@ -2884,11 +2918,11 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     margin: 0;
   }
 
-  /* next: left 103, top 437 within intro (+10px) */
+  /* next: left 103, top 390 within intro (Figma 1702:262) */
   .about-mobile-frame .about-more-link {
     position: absolute;
     left: 103px;
-    top: 437px;
+    top: 390px;
     bottom: auto;
     z-index: 2;
     width: 163px;
