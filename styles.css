@@ -2,7 +2,7 @@
   --color-bg-main: #ffffff;
   --color-bg-hero-top: #a9caf8;
   --color-bg-soft: #f4f2ec;
-  --color-bg-contact: rgba(169, 202, 248, 0.3);
+  --color-bg-contact: rgba(169, 202, 248, 0.6);
   --color-bg-footer: #7b8a8a;
   --color-text-main: #01273e;
   --color-text-muted: #7b8a8a;
@@ -1955,6 +1955,10 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     color: var(--color-text-main);
   }
 
+  .contact-note br {
+    display: none;
+  }
+
   .contact-lead {
     max-width: 415px;
     margin: 0;
@@ -2966,7 +2970,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
 
   .section-contact {
     padding: 100px 0 80px;
-    background: rgba(169, 202, 248, 0.6);
+    background: var(--color-bg-contact);
   }
 
   .contact-layout {
@@ -3086,15 +3090,16 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .contact-note {
-    width: 100%;
-    max-width: 281px;
+    width: max-content;
+    max-width: 100%;
     margin: 95px auto 0;
     font-size: 12px;
     font-weight: 400;
     line-height: 18px;
-    letter-spacing: 0.48px;
+    letter-spacing: 0;
     text-align: left;
     color: var(--color-text-main);
+    white-space: nowrap;
   }
 
   .contact-form {
