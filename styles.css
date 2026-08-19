@@ -1670,16 +1670,16 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     position: relative;
     width: 100%;
     max-width: 1100px;
-    min-height: 520px;
+    min-height: 510px;
     margin: 0 auto;
     padding-bottom: 40px;
   }
 
-  /* io: Figma 1943:446 — left ~89 within 1100 (from 189 in 1280) */
+  /* io: Figma 1943:446 */
   .about-desktop-profile {
     position: absolute;
-    left: 89px;
-    top: 12px;
+    left: 99px;
+    top: 37px;
     width: 441px;
     height: 307px;
   }
@@ -1733,11 +1733,11 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     color: var(--color-text-main);
   }
 
-  /* intro: 603-189=414 from profile left → 89+414=503 */
+  /* intro: Figma 1841:910 */
   .about-desktop-intro {
     position: absolute;
-    left: 503px;
-    top: 0;
+    left: 513px;
+    top: 25px;
     width: 509px;
     height: 445px;
     min-height: 445px;
@@ -1756,8 +1756,8 @@ a.cta-pill.services-contact-cta.is-pressed::before {
 
   .about-desktop-body {
     position: absolute;
-    left: 85px;
-    top: 110px;
+    left: 98px;
+    top: 62px;
     z-index: 1;
     width: 365px;
     margin: 0;
@@ -1775,8 +1775,8 @@ a.cta-pill.services-contact-cta.is-pressed::before {
 
   .about-desktop-intro .about-more-link {
     position: absolute;
-    left: 185px;
-    top: 369px;
+    left: 188px;
+    top: 364px;
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -1803,11 +1803,11 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     visibility: visible;
   }
 
-  /* insta within io: left ~106, top 326 → absolute 89+106 / 12+326 */
+  /* insta within io: Figma 1830:875 */
   .about-insta--desktop {
     position: absolute;
-    left: 195px;
-    top: 338px;
+    left: 297px;
+    top: 363px;
     display: flex;
     flex-direction: column;
     align-items: center;
