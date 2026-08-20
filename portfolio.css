@@ -561,7 +561,7 @@
   .portfolio-images-ad {
     flex: none;
     width: 100%;
-    max-width: 360px;
+    max-width: 180px;
   }
 
   .portfolio-caption {
@@ -580,8 +580,8 @@
   }
 
   .portfolio-caption-title p {
-    font-size: 18px;
-    white-space: normal;
+    font-size: clamp(14px, 4.2vw, 18px);
+    white-space: nowrap;
   }
 
   .portfolio-caption-frame {
