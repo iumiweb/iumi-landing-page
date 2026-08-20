@@ -316,7 +316,8 @@
 .related-nav-link--works-list {
   align-items: center;
   color: var(--color-text-main);
-  cursor: default;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .related-nav-link--works-list .related-nav-link__text {
@@ -330,10 +331,6 @@
 .related-nav-link--works-list .related-nav-link__arrow {
   width: 240px;
   height: auto;
-}
-
-.related-nav-link--works-list:hover {
-  opacity: 1;
 }
 
 @media (max-width: 1100px) {

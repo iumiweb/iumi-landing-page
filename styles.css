@@ -1568,6 +1568,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     width: fit-content;
     margin: 53px auto 0;
     color: var(--color-text-main);
+    text-decoration: none;
   }
 
   .works-list-link span {
@@ -2765,6 +2766,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     width: fit-content;
     margin: 80px auto 0;
     color: var(--color-text-main);
+    text-decoration: none;
   }
 
   .works-list-link span {
