@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;350;400;500;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260810a" />
+    <link rel="stylesheet" href="./styles.css?v=20260820e" />
   </head>
   <body class="page-home" style="--page-top-bg: #a9caf8; --page-bottom-bg: #7b8a8a;">
     <header class="header">
@@ -31,7 +31,7 @@
         </button>
         <nav id="global-nav" class="nav" aria-label="グローバルナビゲーション">
           <a class="nav-link-top" href="#top">TOP</a>
-          <a href="#works">WORK</a>
+          <a href="#works">WORKS</a>
           <a href="#services">SERVICES</a>
           <a href="#about">ABOUT</a>
           <a href="#contact">CONTACT</a>
@@ -76,6 +76,26 @@
       </section>
 
       <section id="works" class="section section-works">
+        <div class="works-message desktop-only" aria-label="メッセージ">
+          <div class="works-message-stars" aria-hidden="true">
+            <img class="works-message-deco works-message-deco--ellipse-10" src="./assets/images/message-ellipse-c.svg" alt="" />
+            <img class="works-message-deco works-message-deco--ellipse-15" src="./assets/images/message-ellipse-b.svg" alt="" />
+            <img class="works-message-deco works-message-deco--star" src="./assets/images/message-star.svg" alt="" />
+            <img class="works-message-deco works-message-deco--ellipse-16" src="./assets/images/message-ellipse-a.svg" alt="" />
+            <img class="works-message-deco works-message-deco--ellipse-11" src="./assets/images/message-ellipse-d.svg" alt="" />
+          </div>
+          <div class="works-message-inner">
+            <div class="works-message-block">
+              <p>頭の中にはあるけれど、うまく言葉にできない。</p>
+              <p>そんなイメージやこだわりも、気兼ねなくお話しください。</p>
+            </div>
+            <div class="works-message-block">
+              <p><span class="works-message-em">お話</span>を伺いながら整理し、</p>
+              <p>Webサイトとして形にしていきます。</p>
+            </div>
+          </div>
+        </div>
+
         <div class="container">
           <div class="section-heading section-heading--works">
             <h2 class="section-title">WORKS</h2>
@@ -84,39 +104,20 @@
           </div>
 
           <div class="works-grid desktop-only">
-            <a class="work-item work-item--desktop" href="./portfolio.html">
-              <div class="work-item-thumb">
-                <img src="./assets/images/work-lp.png" alt="リラクゼーションサロンLP・広告ビジュアル" />
-              </div>
-              <div class="work-item-caption">
-                <p>
-                  リラクゼーションサロン<br />
-                  LP・広告ビジュアル｜自主制作
-                </p>
-              </div>
+            <a class="work-thumb work-thumb--photo" href="./portfolio.html">
+              <img src="./assets/images/works-thumb-1.jpg" alt="LPファーストビュー・広告ビジュアル" width="345" height="224" />
             </a>
-            <a class="work-item work-item--desktop" href="./memo.html">
-              <div class="work-item-thumb">
-                <img src="./assets/images/work-portfolio.png" alt="ポートフォリオサイト" />
-              </div>
-              <div class="work-item-caption">
-                <p>
-                  ポートフォリオサイト<br />
-                  Webサイト｜自主制作
-                </p>
-              </div>
-            </a>
-            <a class="work-item work-item--desktop" href="./banners.html">
-              <div class="work-item-thumb">
-                <img src="./assets/images/work-banners.png" alt="Web広告クリエイティブ" />
-              </div>
-              <div class="work-item-caption">
-                <p>
-                  Web広告クリエイティブ<br />
-                  バナー・SNS画像｜自主制作
-                </p>
-              </div>
-            </a>
+            <div class="work-thumb work-thumb--placeholder" aria-hidden="true">
+              <img src="./assets/images/works-thumb-placeholder.png" alt="" width="345" height="224" />
+            </div>
+            <div class="work-thumb work-thumb--placeholder" aria-hidden="true">
+              <img src="./assets/images/works-thumb-placeholder.png" alt="" width="345" height="224" />
+            </div>
+          </div>
+
+          <div class="works-list-link desktop-only" aria-label="制作したもの一覧">
+            <span>制作したもの一覧</span>
+            <img src="./assets/images/icon-works-list-arrow.svg" alt="" width="200" height="18" />
           </div>
 
           <div class="works-list mobile-only">
@@ -248,7 +249,8 @@
             <div class="about-desktop-intro">
               <img class="about-desktop-frame" src="./assets/images/about-body-frame-desktop.svg?v=4" alt="" aria-hidden="true" />
               <div class="about-desktop-body">
-                <p>大切にしている想いやサービスの魅力が伝わり、その先の出会いやつながりが育っていく。そんなデザインを目指しています。</p>
+                <p>大切にしている想いやサービスの魅力が伝わり、その先の出会いやつながりが育っていく。</p>
+                <p>そんなデザインを目指しています。</p>
                 <p aria-hidden="true">&nbsp;</p>
                 <p>
                   現在は家族とともにイタリアで暮らしながら、日々の暮らしの中で出会う美しいものや、新しい発見を制作の刺激にしています。
@@ -408,7 +410,7 @@
         <div class="footer-meta">
           <nav class="footer-nav" aria-label="フッターナビゲーション">
             <a href="#top">TOP</a>
-            <a href="#works">WORK</a>
+            <a href="#works">WORKS</a>
             <a href="#services">SERVICES</a>
             <a href="#about">ABOUT</a>
             <a href="#contact">CONTACT</a>

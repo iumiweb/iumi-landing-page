@@ -458,6 +458,10 @@ a.cta-pill.hero-works-cta {
 }
 
 /* Works */
+.works-message {
+  display: none;
+}
+
 .section-works {
   background: var(--color-bg-soft);
   padding-bottom: 48px;
@@ -1415,6 +1419,103 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     display: none !important;
   }
 
+  .section-hero {
+    background: linear-gradient(180deg, #a9caf8 0%, #a9caf8 77.885%, #f4f2ec 100%);
+  }
+
+  .works-message {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 1280px;
+    height: 224px;
+    margin: 0 auto;
+    overflow: visible;
+  }
+
+  .works-message-stars {
+    position: absolute;
+    left: 50%;
+    top: 38px;
+    width: 804px;
+    height: 243px;
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  .works-message-deco {
+    position: absolute;
+    display: block;
+    max-width: none;
+  }
+
+  .works-message-deco--ellipse-10 {
+    left: calc(50% - 361px);
+    top: -38px;
+    width: 154px;
+    height: 154px;
+    transform: translateX(-50%);
+  }
+
+  .works-message-deco--ellipse-15 {
+    left: calc(50% - 316px);
+    top: 136px;
+    width: 44px;
+    height: 44px;
+    transform: translateX(-50%);
+  }
+
+  .works-message-deco--star {
+    left: calc(50% + 152px);
+    top: 101px;
+    width: 98px;
+    height: 98px;
+    transform: translateX(-50%);
+  }
+
+  .works-message-deco--ellipse-16 {
+    left: calc(50% + 301px);
+    top: 180px;
+    width: 114px;
+    height: 114px;
+    transform: translateX(-50%);
+  }
+
+  .works-message-deco--ellipse-11 {
+    left: calc(50% + 380px);
+    top: 0;
+    width: 44px;
+    height: 44px;
+    transform: translateX(-50%);
+  }
+
+  .works-message-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 671px;
+    max-width: calc(100% - 80px);
+    margin: 0 auto;
+    padding-top: 68px;
+    text-align: left;
+    font-family: var(--font-body);
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: 0.72px;
+    color: var(--color-text-main);
+  }
+
+  .works-message-block p {
+    margin: 0;
+  }
+
+  .works-message-em {
+    line-height: 50px;
+  }
+
   .works-grid {
     display: grid;
     grid-template-columns: repeat(3, 345px);
@@ -1424,81 +1525,85 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     margin: 0 auto;
   }
 
-  .work-item--desktop {
-    display: flex;
-    flex-direction: column;
+  .work-thumb {
+    position: relative;
+    display: block;
     width: 345px;
+    height: 224px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(123, 138, 138, 0.4);
     text-decoration: none;
     color: inherit;
   }
 
-  .work-item--desktop .work-item-thumb {
-    position: relative;
-    width: 345px;
-    height: 201px;
-    border: 1px solid var(--color-bg-footer);
-    border-bottom: none;
-    overflow: hidden;
-    box-sizing: border-box;
-  }
-
-  .work-item--desktop .work-item-thumb img {
+  .work-thumb--photo img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  .work-item--desktop[href="./banners.html"] .work-item-thumb img {
-    position: absolute;
-    width: 127.13%;
-    height: 177.74%;
-    max-width: none;
-    left: -13.42%;
-    top: -8.56%;
+  .work-thumb--placeholder {
+    display: block;
+  }
+
+  .work-thumb--placeholder img {
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
-  .work-item--desktop .work-item-caption {
-    width: 345px;
-    min-height: 70px;
-    margin-top: 0;
-    padding: 12px 16px;
-    border: 1px solid var(--color-bg-footer);
-    box-sizing: border-box;
-  }
-
-  .work-item--desktop .work-item-caption p {
-    margin: 0;
-    font-family: var(--font-body);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 25px;
+  .works-list-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    width: fit-content;
+    margin: 53px auto 0;
     color: var(--color-text-main);
   }
 
+  .works-list-link span {
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+  }
+
+  .works-list-link img {
+    display: block;
+    width: 200px;
+    height: auto;
+  }
+
   .section-works .section-heading {
-    margin-bottom: 112px;
+    margin-top: 125px;
+    margin-bottom: 120px;
   }
 
   .section-works {
-    padding-bottom: 144px;
+    padding-top: 0;
+    padding-bottom: 53px;
   }
 
   .section-services {
     padding-top: 100px;
-    padding-bottom: 168px;
+    padding-bottom: 158px;
   }
 
   .services-offers {
-    display: grid;
-    grid-template-columns: repeat(3, 345px);
-    justify-content: space-between;
-    align-items: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
     width: 100%;
-    max-width: 1101px;
-    margin: 0 auto;
-    column-gap: 0;
-    row-gap: 68px;
+    max-width: 1280px;
+    margin: 68px auto 0;
+    flex-wrap: nowrap;
   }
 
   .services-offers .services-offer-frame {
@@ -1506,16 +1611,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .services-offers .services-lead-box {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 345px;
-    height: 345px;
-    min-height: 345px;
-    margin: 0;
-    padding: 4px 22px 0;
-    border: 20px solid var(--color-accent);
-    box-sizing: border-box;
+    display: none;
   }
 
   .services-offers .services-lead-box p,
@@ -1633,13 +1729,13 @@ a.cta-pill.services-contact-cta.is-pressed::before {
   }
 
   .services-offers .services-process-link {
-    grid-column: 1 / -1;
-    justify-self: center;
+    position: static;
+    flex: 0 0 284px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
-    width: fit-content;
+    width: 284px;
     margin: 0;
     color: var(--color-text-main);
     text-decoration: none;
@@ -1650,6 +1746,7 @@ a.cta-pill.services-contact-cta.is-pressed::before {
     font-weight: 500;
     line-height: 30px;
     letter-spacing: 2px;
+    white-space: nowrap;
   }
 
   .services-offers .services-process-link img {

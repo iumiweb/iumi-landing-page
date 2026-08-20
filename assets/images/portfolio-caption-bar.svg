@@ -1,3 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 527 100" fill="none" preserveAspectRatio="none">
-  <path d="M0 0H527V100H0V0Z" fill="#FFC100"/>
+<svg width="527" height="100" viewBox="0 0 527 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="527" height="100" fill="#A3A29E"/>
+<g id="WORK1">
+<rect width="1280" height="2874" transform="translate(-122 -1779)" fill="white"/>
+<g id="instruction">
+<g id="title">
+<path id="Rectangle 23" d="M0 0H527V99.9999L0 100V0Z" fill="#FFC100"/>
+</g>
+</g>
+</g>
 </svg>
