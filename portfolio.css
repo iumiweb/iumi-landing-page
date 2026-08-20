@@ -88,8 +88,7 @@
   font-family: var(--font-body);
   font-size: 24px;
   line-height: 30px;
-  font-weight: 500;
-  white-space: nowrap;
+  font-weight: 400;
   color: var(--color-text-main);
 }
 
@@ -529,9 +528,8 @@
     margin-top: 8px;
     font-size: clamp(15px, 4.1vw, 20px);
     line-height: 1.45;
-    font-weight: 500;
+    font-weight: 400;
     white-space: normal;
-    text-wrap: balance;
   }
 
   .portfolio-title-sub {
