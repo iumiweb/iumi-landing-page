@@ -177,12 +177,16 @@ html[lang="en"] .line-step p {
 }
 
 .line-steps {
+  position: relative;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   gap: 0;
-  margin: 90px 16px 0;
-  padding: 42px 8px 36px;
+  box-sizing: border-box;
+  width: calc(100% - 32px);
+  height: 430px;
+  margin: 90px auto 0;
+  padding: 42px 0 0;
   background: rgba(6, 199, 85, 0.1);
 }
 
@@ -231,7 +235,7 @@ html[lang="en"] .line-step p {
 }
 
 .line-step-icons img:last-child {
-  left: calc(50% + 43.5px);
+  left: 97px;
   top: 28px;
   width: 90px;
   height: 90px;
@@ -249,10 +253,12 @@ html[lang="en"] .line-step p {
 }
 
 .line-step-arrow {
+  position: relative;
+  z-index: 2;
   display: block;
   width: 20px;
   height: 40px;
-  margin: 137px 0 0;
+  margin: 138px -20px 0 0;
   flex: 0 0 20px;
 }
 
@@ -271,7 +277,7 @@ html[lang="en"] .line-step p {
   line-height: 24px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .line-board {
     width: min(100% - 48px, 1160px);
   }
@@ -279,7 +285,9 @@ html[lang="en"] .line-step p {
   .line-steps {
     flex-wrap: wrap;
     gap: 28px 12px;
+    height: auto;
     margin-top: 72px;
+    padding: 42px 16px 36px;
   }
 
   .line-step {
