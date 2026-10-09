@@ -70,7 +70,7 @@
 
 .works-list-note {
   width: min(100% - 120px, 1160px);
-  margin: 200px auto 0;
+  margin: 401px auto 0;
   font-family: var(--font-body);
   font-size: 16px;
   font-weight: 400;
@@ -126,6 +126,15 @@
 
   .works-list-note {
     width: min(100% - 48px, 345px);
-    margin: 200px auto 0;
+    margin: 120px auto 0;
   }
+}
+
+html[lang="en"] .works-list-title-main {
+  white-space: normal;
+}
+
+html[lang="en"] .works-list-card-caption {
+  font-weight: 300;
+  letter-spacing: 0.02em;
 }
